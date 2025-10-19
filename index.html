@@ -18,7 +18,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
         
         body {
-            font-family: 'Noto Sans KR', '나눔고딕', 'NanumGothic', sans-serif;
+            font-family: '나눔고딕', 'NanumGothic', 'Noto Sans KR', sans-serif;
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Gachon.jpg/500px-Gachon.jpg');
             background-size: cover;
             background-position: center;
@@ -27,6 +27,8 @@
             position: relative;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
         }
 
         body::before {
@@ -44,6 +46,8 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .header {
@@ -57,7 +61,7 @@
 
         .header h1 {
             color: #2c3e50;
-            font-family: 'juac', 'Noto Sans KR', '나눔고딕', 'NanumGothic', sans-serif;
+            font-family: '나눔고딕', 'NanumGothic', sans-serif;
             font-size: 2.5em;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -68,14 +72,22 @@
             color: #7f8c8d;
             font-size: 1.2em;
             font-weight: 500;
+            font-family: '나눔고딕', 'NanumGothic', sans-serif;
         }
 
         .controls {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             gap: 15px;
             margin-bottom: 30px;
-            flex-wrap: wrap;
+        }
+
+        .timer-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .control-group {
@@ -89,7 +101,7 @@
         }
 
         .timer {
-            font-size: 1.5em;
+            font-size: 2em;
             font-weight: bold;
             color: #e74c3c;
             min-width: 120px;
@@ -178,13 +190,14 @@
         }
 
         .mode-btn {
-            padding: 12px 24px;
+            padding: 8px 16px;
             border: 2px solid #3498db;
             background: white;
             color: #3498db;
-            border-radius: 25px;
+            border-radius: 20px;
             cursor: pointer;
             font-weight: 600;
+            font-size: 14px;
             transition: all 0.3s ease;
             -webkit-tap-highlight-color: transparent;
             -webkit-user-select: none;
@@ -221,6 +234,7 @@
             overflow: hidden;
             transform-style: preserve-3d;
             transition: transform 0.6s;
+            margin: 0 auto;
         }
 
         .flashcard.flipped {
@@ -353,14 +367,15 @@
             justify-content: center;
             gap: 15px;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
 
         .nav-btn {
-            padding: 15px 30px;
-            font-size: 16px;
+            padding: 12px 20px;
+            font-size: 14px;
             font-weight: 600;
-            border-radius: 10px;
-            min-width: 120px;
+            border-radius: 8px;
+            min-width: 80px;
             -webkit-tap-highlight-color: transparent;
             -webkit-user-select: none;
             -moz-user-select: none;
@@ -435,6 +450,7 @@
             border-radius: 10px;
             margin-bottom: 20px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
         }
 
         .stat-item {
@@ -454,6 +470,14 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
             .header h1 {
                 font-size: 2em;
             }
@@ -464,13 +488,16 @@
             }
             
             .control-group {
-                flex-direction: column;
-                gap: 10px;
+                flex-direction: row;
+                gap: 8px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
             
             .mode-selector {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
             }
             
             .question {
@@ -483,6 +510,8 @@
             }
             
             .navigation {
+                flex-direction: row;
+                justify-content: center;
                 flex-wrap: wrap;
             }
             
@@ -503,9 +532,9 @@
             }
             
             .mode-btn {
-                padding: 15px 30px;
-                font-size: 16px;
-                min-height: 48px;
+                padding: 10px 18px;
+                font-size: 14px;
+                min-height: 40px;
                 -webkit-tap-highlight-color: transparent;
                 touch-action: manipulation;
             }
@@ -519,9 +548,10 @@
             }
             
             .nav-btn {
-                padding: 18px 30px;
-                font-size: 18px;
-                min-height: 56px;
+                padding: 10px 16px;
+                font-size: 14px;
+                min-height: 40px;
+                min-width: 70px;
                 -webkit-tap-highlight-color: transparent;
                 touch-action: manipulation;
             }
@@ -531,8 +561,9 @@
             }
             
             .stats {
-                flex-direction: column;
-                gap: 15px;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
             }
             
             .stat-item {
@@ -542,7 +573,7 @@
 
         @media (max-width: 480px) {
             .container {
-                padding: 10px;
+                padding: 8px;
             }
             
             .header h1 {
@@ -576,8 +607,8 @@
             }
             
             .mode-btn {
-                padding: 12px 24px;
-                font-size: 14px;
+                padding: 8px 14px;
+                font-size: 12px;
             }
             
             .reveal-btn {
@@ -586,8 +617,9 @@
             }
             
             .nav-btn {
-                padding: 15px 25px;
-                font-size: 16px;
+                padding: 8px 12px;
+                font-size: 12px;
+                min-width: 60px;
             }
         }
     </style>
@@ -595,24 +627,15 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>사량이의 ⭐합격⭐을 위한 면접 연습기</h1>
+            <h1>사량이의 ⭐합격⭐을 위한<br>면접 연습기</h1>
             <div class="subtitle">[가천대학교 법학과]</div>
         </div>
 
-        <div class="controls">
-            <div class="control-group">
-                <div class="timer" id="timer">00:00</div>
-                <button class="btn btn-success" id="startBtn">시작</button>
-                <button class="btn btn-warning" id="pauseBtn" disabled>일시정지</button>
-                <button class="btn btn-danger" id="resetBtn">초기화</button>
-            </div>
-        </div>
-
         <div class="mode-selector">
-            <button class="mode-btn active" data-mode="sequential">번호순</button>
-            <button class="mode-btn" data-mode="reverse">역순</button>
-            <button class="mode-btn" data-mode="random">랜덤</button>
-            <button class="mode-btn" data-mode="bookmark">북마크</button>
+            <button class="mode-btn active" data-mode="sequential">🔢 번호순</button>
+            <button class="mode-btn" data-mode="reverse">🔄 역순</button>
+            <button class="mode-btn" data-mode="random">🎲 랜덤</button>
+            <button class="mode-btn" data-mode="bookmark">⭐ 북마크</button>
         </div>
 
         <div class="stats">
@@ -634,6 +657,17 @@
             <div>진행률: <span id="progressText">0%</span></div>
             <div class="progress-bar">
                 <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="timer-container">
+                <div class="timer" id="timer">00:00</div>
+            </div>
+            <div class="control-group">
+                <button class="btn btn-success" id="startBtn">시작</button>
+                <button class="btn btn-warning" id="pauseBtn" disabled>일시정지</button>
+                <button class="btn btn-danger" id="resetBtn">초기화</button>
             </div>
         </div>
 
