@@ -2,1410 +2,1847 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="theme-color" content="#3498db">
-    <title>사량이의 ⭐합격⭐을 위한 면접 연습기 [가천대학교 법학과]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>은채의 가천대 면접 연습기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Nanum Gothic', sans-serif;
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
-        
         body {
-            font-family: '나눔고딕', 'NanumGothic', 'Noto Sans KR', sans-serif;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Gachon.jpg/500px-Gachon.jpg');
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Gachon.jpg/500px-Gachon.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             min-height: 100vh;
-            position: relative;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
             -webkit-overflow-scrolling: touch;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.7);
-            z-index: -1;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
             width: 100%;
-            box-sizing: border-box;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .header h1 {
-            color: #2c3e50;
-            font-family: '나눔고딕', 'NanumGothic', sans-serif;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            font-weight: 700;
-        }
-
-        .header .subtitle {
-            color: #7f8c8d;
-            font-size: 1.2em;
-            font-weight: 500;
-            font-family: '나눔고딕', 'NanumGothic', sans-serif;
-        }
-
-        .controls {
+            max-width: 1000px;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 30px;
+            gap: 30px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Jua', sans-serif;
+            font-size: 2.8rem;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(135deg, #1e5799 0%, #207cca 100%);
+            padding: 15px 30px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: white;
+            font-family: 'Jua', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 10px;
         }
 
         .timer-container {
-            background: rgba(255, 255, 255, 0.9);
+            background: linear-gradient(135deg, #1e5799 0%, #207cca 100%);
+            border-radius: 15px;
             padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .control-group {
             display: flex;
-            gap: 10px;
+            flex-direction: column;
             align-items: center;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .timer {
-            font-size: 2em;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #e74c3c;
-            min-width: 120px;
-            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
         }
 
-        .btn {
-            padding: 10px 20px;
+        .timer-controls {
+            display: flex;
+            gap: 15px;
+        }
+
+        .timer-controls button {
+            background-color: white;
+            color: #1e5799;
             border: none;
             border-radius: 8px;
+            padding: 10px 15px;
+            font-weight: bold;
             cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
             transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            -webkit-tap-highlight-color: transparent;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             touch-action: manipulation;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #2980b9, #1f618d);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
-        }
-
-        .btn-success {
-            background: linear-gradient(135deg, #27ae60, #229954);
-            color: white;
-        }
-
-        .btn-success:hover {
-            background: linear-gradient(135deg, #229954, #1e8449);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
-        }
-
-        .btn-warning {
-            background: linear-gradient(135deg, #f39c12, #e67e22);
-            color: white;
-        }
-
-        .btn-warning:hover {
-            background: linear-gradient(135deg, #e67e22, #d35400);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
-        }
-
-        .btn-danger {
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
-            color: white;
-        }
-
-        .btn-danger:hover {
-            background: linear-gradient(135deg, #c0392b, #a93226);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
-        }
-
-        .btn-info {
-            background: linear-gradient(135deg, #8e44ad, #9b59b6);
-            color: white;
-        }
-
-        .btn-info:hover {
-            background: linear-gradient(135deg, #9b59b6, #8e44ad);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(142, 68, 173, 0.4);
-        }
-
-        .mode-selector {
+            -webkit-tap-highlight-color: transparent;
+            min-height: 45px;
             display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
+            align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
         }
 
-        .mode-btn {
-            padding: 8px 16px;
-            border: 2px solid #3498db;
+        .timer-controls button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .timer-controls button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .tab-container {
             background: white;
-            color: #3498db;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            -webkit-tap-highlight-color: transparent;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            touch-action: manipulation;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
-        .mode-btn.active {
-            background: #3498db;
-            color: white;
-            transform: scale(1.05);
-        }
-
-        .mode-btn:hover {
-            background: #3498db;
-            color: white;
-            transform: scale(1.05);
-        }
-
-        .flashcard-container {
+        .tabs {
             display: flex;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 15px 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            color: #555;
+            border-bottom: 3px solid transparent;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
             justify-content: center;
-            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .tab:hover {
+            background-color: #f5f5f5;
+            color: #1e5799;
+        }
+
+        .tab:active {
+            background-color: #e8f4fd;
+            transform: scale(0.98);
+        }
+
+        .tab.active {
+            color: #1e5799;
+            border-bottom-color: #1e5799;
+            background-color: #f0f8ff;
         }
 
         .flashcard {
-            width: 100%;
-            max-width: 800px;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            transform-style: preserve-3d;
-            transition: transform 0.6s;
-            margin: 0 auto;
-        }
-
-        .flashcard.flipped {
-            transform: rotateY(180deg);
-        }
-
-        .card-front, .card-back {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             padding: 40px;
             min-height: 400px;
+            position: relative;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            backface-visibility: hidden;
         }
 
-        .card-back {
-            transform: rotateY(180deg);
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-        }
-
-        .question-number {
-            font-size: 1.2em;
-            color: #7f8c8d;
-            margin-bottom: 20px;
-            font-weight: 600;
+        .set-title {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #1e5799;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            z-index: 10;
         }
 
         .question {
-            font-size: 1.8em;
-            color: #2c3e50;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            font-weight: 600;
+            font-size: 2rem;
+            margin: 60px auto 30px;
+            text-align: center;
+            color: #1e5799;
+            font-weight: bold;
+            max-width: 90%;
+            position: relative;
+            line-height: 1.4;
         }
 
-        .reveal-section {
-            margin-bottom: 20px;
+        .question::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #1e5799, transparent);
         }
 
-        .reveal-buttons {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .reveal-btn {
-            background: linear-gradient(135deg, #9b59b6, #8e44ad);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            transition: all 0.3s ease;
-            width: 100%;
-            -webkit-tap-highlight-color: transparent;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            touch-action: manipulation;
-        }
-
-        .reveal-btn:hover {
-            background: linear-gradient(135deg, #8e44ad, #7d3c98);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
-        }
-
-        .revealed-content {
-            background: rgba(155, 89, 182, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid #9b59b6;
-            margin-top: 15px;
+        .answer-section {
+            margin-top: 30px;
             display: none;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
         }
 
-        .revealed-content.show {
-            display: block;
-            animation: fadeIn 0.5s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .keywords {
-            margin-bottom: 20px;
-        }
-
-        .keywords h3 {
-            color: #e74c3c;
+        .section-title {
+            font-weight: bold;
             margin-bottom: 10px;
-            font-size: 1.3em;
+            color: #1e5799;
         }
 
-        .keyword-list {
+        .bookmark-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 10px;
+            border-radius: 50%;
+            min-width: 50px;
+            min-height: 50px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .keyword {
-            background: #e74c3c;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 14px;
-            font-weight: 600;
+        .bookmark-button:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            transform: scale(1.1);
         }
 
-        .answer h3 {
-            color: #27ae60;
-            margin-bottom: 15px;
-            font-size: 1.3em;
+        .bookmark-button.active {
+            color: #ffcc00;
+            background-color: rgba(255, 204, 0, 0.1);
+            animation: pulse 1s ease;
         }
 
-        .answer-text {
-            color: #2c3e50;
-            line-height: 1.8;
-            font-size: 1.1em;
+        .bookmark-button:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
 
         .navigation {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        .nav-btn {
-            padding: 12px 20px;
-            font-size: 14px;
-            font-weight: 600;
-            border-radius: 8px;
-            min-width: 80px;
-            -webkit-tap-highlight-color: transparent;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            touch-action: manipulation;
-        }
-
-        .progress-info {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: #ecf0f1;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-top: 10px;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #3498db, #2ecc71);
-            transition: width 0.3s ease;
-        }
-
-        .bookmark-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #f39c12;
+        .nav-button {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #1e5799 0%, #207cca 100%);
             color: white;
             border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            border-radius: 12px;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
             transition: all 0.3s ease;
-            z-index: 10;
-            -webkit-tap-highlight-color: transparent;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
+            box-shadow: 0 10px 20px rgba(30, 87, 153, 0.3);
             touch-action: manipulation;
-        }
-
-        .bookmark-btn.bookmarked {
-            background: #e74c3c;
-        }
-
-        .bookmark-btn:hover {
-            transform: scale(1.1);
-        }
-
-        .bookmark-btn:active {
-            transform: scale(0.95);
-        }
-
-        .stats {
+            -webkit-tap-highlight-color: transparent;
+            min-height: 50px;
             display: flex;
-            justify-content: space-around;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
         }
 
-        .stat-item {
-            text-align: center;
+        .nav-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(30, 87, 153, 0.4);
         }
 
-        .stat-number {
-            font-size: 2em;
+        .nav-button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 15px rgba(30, 87, 153, 0.4);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 10px;
+            resize: vertical;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        .save-button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 10px;
+            cursor: pointer;
             font-weight: bold;
-            color: #3498db;
         }
 
-        .stat-label {
-            color: #7f8c8d;
-            font-size: 0.9em;
-            margin-top: 5px;
+        .save-button:hover {
+            background: #45a049;
         }
 
+        /* 모바일 반응형 디자인 */
         @media (max-width: 768px) {
             body {
-                background-attachment: scroll;
-            }
-            
-            .container {
                 padding: 10px;
             }
-            
-            .header h1 {
-                font-size: 2em;
+
+            .container {
+                gap: 20px;
             }
-            
-            .controls {
+
+            h1 {
+                font-size: 2.2rem;
+                padding: 12px 20px;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+                padding: 8px 15px;
+            }
+
+            .timer {
+                font-size: 2rem;
+            }
+
+            .timer-controls {
                 flex-direction: column;
-                align-items: center;
+                gap: 10px;
             }
-            
-            .control-group {
-                flex-direction: row;
-                gap: 8px;
-                flex-wrap: wrap;
-                justify-content: center;
+
+            .timer-controls button {
+                width: 100%;
+                font-size: 0.9rem;
             }
-            
-            .mode-selector {
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
+
+            .tabs {
+                flex-direction: column;
             }
-            
+
+            .tab {
+                font-size: 0.8rem;
+                padding: 12px 8px;
+                min-height: 45px;
+            }
+
+            .flashcard {
+                padding: 30px 20px;
+                min-height: 350px;
+            }
+
             .question {
-                font-size: 1.5em;
+                font-size: 1.6rem;
+                margin: 50px auto 25px;
             }
-            
-            .card-front, .card-back {
-                padding: 20px;
-                min-height: 300px;
+
+            .answer-tabs {
+                flex-direction: column;
+                gap: 15px;
+                margin: 30px auto;
             }
-            
+
+            .tab-button {
+                width: 100%;
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
+
             .navigation {
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
+                flex-direction: column;
+                gap: 15px;
             }
-            
-            .bookmark-btn {
-                width: 60px;
-                height: 60px;
-                font-size: 24px;
+
+            .nav-button {
+                width: 100%;
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
+
+            .bookmark-button {
                 top: 15px;
                 right: 15px;
+                font-size: 1.8rem;
+                min-width: 45px;
+                min-height: 45px;
+                padding: 8px;
             }
-            
-            .btn {
-                padding: 12px 24px;
-                font-size: 16px;
-                min-height: 48px;
-                -webkit-tap-highlight-color: transparent;
-                touch-action: manipulation;
+
+            .keywords-section,
+            .example-answer-section {
+                max-height: 250px;
+                padding: 20px;
             }
-            
-            .mode-btn {
-                padding: 10px 18px;
-                font-size: 14px;
-                min-height: 40px;
-                -webkit-tap-highlight-color: transparent;
-                touch-action: manipulation;
+
+            .section-title {
+                font-size: 1.1rem;
             }
-            
-            .reveal-btn {
-                padding: 18px 30px;
-                font-size: 18px;
-                min-height: 56px;
-                -webkit-tap-highlight-color: transparent;
-                touch-action: manipulation;
-            }
-            
-            .nav-btn {
-                padding: 10px 16px;
-                font-size: 14px;
-                min-height: 40px;
-                min-width: 70px;
-                -webkit-tap-highlight-color: transparent;
-                touch-action: manipulation;
-            }
-            
-            .flashcard {
-                margin: 0 10px;
-            }
-            
-            .stats {
-                flex-direction: row;
-                justify-content: space-around;
-                flex-wrap: wrap;
-            }
-            
-            .stat-item {
-                padding: 10px;
+
+            .keywords-content,
+            .example-answer-content {
+                font-size: 1rem;
             }
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 8px;
+            h1 {
+                font-size: 1.8rem;
+                padding: 10px 15px;
             }
-            
-            .header h1 {
-                font-size: 1.8em;
-                line-height: 1.2;
+
+            h2 {
+                font-size: 1.2rem;
+                padding: 6px 12px;
             }
-            
-            .header .subtitle {
-                font-size: 1em;
-            }
-            
+
             .question {
-                font-size: 1.3em;
-                line-height: 1.4;
+                font-size: 1.4rem;
+                margin: 40px auto 20px;
             }
-            
-            .card-front, .card-back {
-                padding: 15px;
-                min-height: 250px;
+
+            .flashcard {
+                padding: 25px 15px;
+                min-height: 300px;
             }
-            
-            .bookmark-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-            }
-            
-            .btn {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-            
-            .mode-btn {
-                padding: 8px 14px;
-                font-size: 12px;
-            }
-            
-            .reveal-btn {
-                padding: 15px 25px;
-                font-size: 16px;
-            }
-            
-            .nav-btn {
-                padding: 8px 12px;
-                font-size: 12px;
-                min-width: 60px;
+
+            .bookmark-button {
+                font-size: 1.6rem;
+                min-width: 40px;
+                min-height: 40px;
+                padding: 6px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>사량이의 ⭐합격⭐을 위한<br>면접 연습기</h1>
-            <div class="subtitle">[가천대학교 법학과]</div>
-        </div>
+        <header>
+            <h1>은채의 ✨합격✨을 위한 면접 연습기</h1>
+            <h2>[가천대학교 사회복지학과]</h2>
+        </header>
 
-        <div class="mode-selector">
-            <button class="mode-btn active" data-mode="sequential">🔢 번호순</button>
-            <button class="mode-btn" data-mode="reverse">🔄 역순</button>
-            <button class="mode-btn" data-mode="random">🎲 랜덤</button>
-            <button class="mode-btn" data-mode="bookmark">⭐ 북마크</button>
-        </div>
-
-        <div class="stats">
-            <div class="stat-item">
-                <div class="stat-number" id="currentQuestion">1</div>
-                <div class="stat-label">현재 문제</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" id="totalQuestions">22</div>
-                <div class="stat-label">총 문제</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" id="bookmarkCount">0</div>
-                <div class="stat-label">북마크</div>
+        <div class="timer-container">
+            <div class="timer">00:00</div>
+            <div class="timer-controls">
+                <button id="start-timer"><i class="fas fa-play"></i> 시작</button>
+                <button id="pause-timer"><i class="fas fa-pause"></i> 일시정지</button>
+                <button id="reset-timer"><i class="fas fa-redo"></i> 초기화</button>
             </div>
         </div>
 
-        <div class="progress-info">
-            <div>진행률: <span id="progressText">0%</span></div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+        <div class="tab-container">
+            <div class="tabs">
+                <div class="tab active" data-mode="sequential">번호순으로 문제풀기</div>
+                <div class="tab" data-mode="reverse">역순으로 문제풀기</div>
+                <div class="tab" data-mode="random">랜덤으로 문제풀기</div>
+                <div class="tab" data-mode="bookmark">북마크한 문제풀기</div>
             </div>
         </div>
+        
 
-        <div class="controls">
-            <div class="timer-container">
-                <div class="timer" id="timer">00:00</div>
+        <div class="flashcard">
+            <button class="bookmark-button"><i class="fas fa-star"></i></button>
+            <div class="set-title"></div>
+            <div class="question"></div>
+            <div class="answer-tabs" style="display: flex; gap: 20px; justify-content: center; margin: 40px auto; flex-wrap: wrap;">
+                <button class="tab-button keywords-tab" style="padding: 15px 30px; background: linear-gradient(135deg, #1e5799 0%, #207cca 100%); color: white; border: none; border-radius: 12px; cursor: pointer; font-weight: bold; transition: all 0.3s ease; font-size: 1.2rem; box-shadow: 0 10px 20px rgba(30, 87, 153, 0.3); touch-action: manipulation; -webkit-tap-highlight-color: transparent; min-height: 50px; display: flex; align-items: center; justify-content: center;">핵심 키워드</button>
+                <button class="tab-button example-tab" style="padding: 15px 30px; background: linear-gradient(135deg, #1e5799 0%, #207cca 100%); color: white; border: none; border-radius: 12px; cursor: pointer; font-weight: bold; transition: all 0.3s ease; font-size: 1.2rem; box-shadow: 0 10px 20px rgba(30, 87, 153, 0.3); touch-action: manipulation; -webkit-tap-highlight-color: transparent; min-height: 50px; display: flex; align-items: center; justify-content: center;">예시 답변</button>
             </div>
-            <div class="control-group">
-                <button class="btn btn-success" id="startBtn">시작</button>
-                <button class="btn btn-warning" id="pauseBtn" disabled>일시정지</button>
-                <button class="btn btn-danger" id="resetBtn">초기화</button>
-            </div>
-        </div>
-
-        <div class="navigation">
-            <button class="btn btn-info nav-btn" id="firstBtn">🏠 처음으로</button>
-            <button class="btn btn-primary nav-btn" id="prevBtn">⬅️ 이전 문제</button>
-            <button class="btn btn-primary nav-btn" id="nextBtn">다음 문제 ➡️</button>
-        </div>
-
-        <div class="flashcard-container">
-            <div class="flashcard" id="flashcard">
-                <button class="bookmark-btn" id="bookmarkBtn">★</button>
-                <div class="card-front">
-                    <div class="question-number" id="questionNumber">문제 1</div>
-                    <div class="question" id="questionText">문제가 여기에 표시됩니다.</div>
-                    <div class="reveal-section">
-                        <div class="reveal-buttons">
-                            <button class="reveal-btn" id="revealKeywordsBtn">핵심 키워드 보기</button>
-                            <button class="reveal-btn" id="revealAnswerBtn">예시 답변 보기</button>
-                        </div>
-                        <div class="revealed-content" id="keywordsContent">
-                            <div class="keywords">
-                                <h3>핵심 키워드</h3>
-                                <div class="keyword-list" id="keywordList"></div>
-                            </div>
-                        </div>
-                        <div class="revealed-content" id="answerContent">
-                            <div class="answer">
-                                <h3>예시 답변</h3>
-                                <div class="answer-text" id="answerText"></div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="answer-sections">
+                <div class="keywords-section hidden" style="margin-top: 30px; padding: 25px; border: none; border-radius: 15px; background-color: #f9f9f9; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); max-height: 300px; overflow-y: auto;">
+                    <div class="section-title" style="font-weight: bold; color: #1e5799; margin-bottom: 15px; font-size: 1.3rem; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;">핵심 키워드</div>
+                    <div class="keywords-content" style="line-height: 1.8; font-size: 1.1rem; color: #444;"></div>
+                </div>
+                <div class="example-answer-section hidden" style="margin-top: 30px; padding: 25px; border: none; border-radius: 15px; background-color: #f9f9f9; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); max-height: 300px; overflow-y: auto;">
+                    <div class="section-title" style="font-weight: bold; color: #1e5799; margin-bottom: 15px; font-size: 1.3rem; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;">예시 답변</div>
+                    <div class="example-answer-content" style="line-height: 1.8; font-size: 1.1rem; color: #444; white-space: pre-line;"></div>
                 </div>
             </div>
+        </div>
+
+            <div class="navigation">
+            <button class="nav-button" id="home"><i class="fas fa-home"></i> 처음으로</button>
+            <button class="nav-button" id="prev"><i class="fas fa-arrow-left"></i> 이전 문제</button>
+            <button class="nav-button" id="next">다음 문제 <i class="fas fa-arrow-right"></i></button>
         </div>
     </div>
 
     <script>
-        // 문제 데이터
-        const questions = [
+        // 문제 데이터 구조 정의
+        const questionSets = [
             {
-                id: 1,
-                question: "경찰 조직 내 자살 문제를 주제로 탐구했다고 했는데, 핵심 원인과 해결 방안을 간단히 설명해 보세요.",
-                keywords: ["과중한 업무", "사건 트라우마", "상담 이용 낙인", "마음동행센터", "인력 확충", "교대근무 정상화"],
-                answer: "과중한 업무와 사건 트라우마, 상담 이용에 대한 낙인 우려가 주요 원인이었습니다. 단기적으로는 마음동행센터 같은 기존 인프라의 상담 인력 확충과 상담 시간을 근무시간으로 인정하는 제도 보완이 필요하고, 중장기적으로는 인력 충원과 교대근무 정상화가 병행되어야 한다고 봅니다. [출처: 3학년 자율활동]",
-                subQuestions: [
+                id: "A-1",
+                title: "💙 A. 자기소개 및 지원 동기",
+                questions: [
                     {
-                        id: "1-1",
-                        question: "지금 당장 실행 가능한 조치 한 가지만 고른다면 무엇이며, 효과를 어떻게 측정하겠습니까?",
-                        keywords: ["상담 인력 확충", "상담 대기기간", "이용률", "우울·번아웃 지표", "핵심 성과지표"],
-                        answer: "상담 인력 확충입니다. 상담 대기기간, 이용률, 3개월·6개월 추적 우울·번아웃 지표 변화를 핵심 성과지표로 두겠습니다. [출처: 3학년 화법과 작문]"
+                        id: "A-1-Q",
+                        type: "main",
+                        text: "1. 본인을 간단히 소개하고 사회복지학과에 지원하게 된 구체적인 이유를 말해 주세요.",
+                        keywords: "사람의 마음과 관계, 독거노인 반찬 배달, 마을회관 봉사, 동네방네 프로젝트, 봉사팀 리더, 지속 가능한 도움",
+                        answer: "저는 사람의 마음과 관계에 깊은 관심을 가지고 성장해 온 고은채입니다. 초등학교 때부터 사람들의 감정 변화를 관찰하는 걸 좋아했고, 가족과 함께 독거노인 반찬 배달과 마을회관 봉사를 다니며 '도움을 주는 일의 보람'을 느꼈습니다. 고등학교에서는 '동네방네 프로젝트' 봉사팀 리더로 활동하며 단순한 봉사가 아닌 '지속 가능한 도움'을 고민하게 되었습니다. 이때 전문적으로 사람을 돕고자 사회복지학과를 선택했습니다. [2학년 자율활동/봉사]",
+                        userAnswer: ""
                     },
                     {
-                        id: "1-2",
-                        question: "상담 접근성을 높이기 위해 조직 문화 측면에서 필요한 장치는 무엇일까요?",
-                        keywords: ["관리자 교육", "이용 독려", "비밀보장", "인사 불이익 금지", "익명 피드백 시스템"],
-                        answer: "관리자 교육을 통한 이용 독려, 상담 이용 비밀보장 및 인사 불이익 금지의 명문화, 이용자 익명 피드백 시스템이 필요합니다. [출처: 3학년 화법과 작문]"
+                        id: "A-1-QF",
+                        type: "followup",
+                        text: "1-1. 봉사 경험 중 본인을 가장 변화시킨 순간은 언제였나요?",
+                        keywords: "교육청 차원의 봉사활동 프로젝트, 팀 의견, 경청, 합의, 리더십, 듣는 힘",
+                        answer: "교육청 차원의 봉사활동 프로젝트에서 팀 의견이 갈렸을 때, 제 생각보다 팀의 합의를 우선하며 경청으로 문제를 해결했습니다. 이 경험은 '리더십은 말하는 힘이 아니라 듣는 힘'이라는 점을 깨닫게 했습니다. [2학년 자율활동]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 2,
-                question: "청소년의 SNS 이용 규제 필요성을 주장했는데, 표현의 자유와의 충돌은 어떻게 조정해야 할까요?",
-                keywords: ["미성년 보호", "표현의 자유", "최소침해 원칙", "법익균형", "유해콘텐츠 필터링", "시간 제한"],
-                answer: "미성년 보호라는 공익과 표현의 자유를 최소침해와 법익균형 원칙으로 조정해야 합니다. 계정 삭제 같은 과도한 제한보다 유해콘텐츠 필터링과 시간 제한 같은 단계적 조치가 정당화됩니다. [출처: 3학년 진로활동]",
-                subQuestions: [
+                id: "B-1",
+                title: "💜 B. 복지 제도 및 통합교육",
+                questions: [
                     {
-                        id: "2-1",
-                        question: "규제 강도를 정량화할 기준을 하나 설계해 본다면요?",
-                        keywords: ["청소년 노출지수", "유해 키워드 빈도", "시청시간", "연령확인 정확도", "임계치", "보호장치 의무 가동"],
-                        answer: "플랫폼별 청소년 노출지수(유해 키워드 빈도, 시청시간, 연령확인 정확도)를 산출하고 임계치 초과 시 보호장치 의무 가동을 법제화하겠습니다. [출처: 3학년 진로활동]"
+                        id: "B-1-Q",
+                        type: "main",
+                        text: "2. 복지시설의 서비스 질 저하 문제를 탐구했다고 했는데, 가장 시급한 개선 과제는 무엇이라고 생각하나요?",
+                        keywords: "인력 부족, 고령화, 수요 급증, 서비스 질 저하, 인력 확충, 처우 개선",
+                        answer: "인력 부족입니다. 고령화로 수요는 급증하지만 현장 인력은 부족해 서비스 질이 저하됩니다. 복지 인력 확충과 처우 개선이 가장 시급합니다. [3학년 자율활동]",
+                        userAnswer: ""
                     },
                     {
-                        id: "2-2",
-                        question: "시간 제한이 학습권과 충돌할 때는 어떻게 예외를 두시겠습니까?",
-                        keywords: ["인증형 학습 플랫폼", "교사 인증 계정", "화이트리스트", "학습용 트래픽", "별도 카운트"],
-                        answer: "인증형 학습 플랫폼·교사 인증 계정을 화이트리스트로 분류해 학습용 트래픽은 별도 카운트로 관리합니다. [출처: 3학년 진로활동]"
+                        id: "B-1-QF",
+                        type: "followup",
+                        text: "2-1. 학생 입장에서 이 문제 해결을 위해 어떤 기여를 할 수 있을까요?",
+                        keywords: "복지 관련 직업, 현장 실습형 프로그램, 복지 인력의 가치",
+                        answer: "복지 관련 직업을 알리고, 현장 실습형 프로그램을 제안해 복지 인력의 가치를 알리는 활동을 이어가고 싶습니다. [3학년 자율활동]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 3,
-                question: "1학년 때 심신미약 감형 문제를 제기하며 국민신문고에 의견을 냈습니다. 개정 방향 핵심은 무엇이었나요?",
-                keywords: ["책임능력", "사전 약물 남용", "모의성", "엄격한 심리", "감형 요건 협소화", "피해자 보호", "책임주의"],
-                answer: "사건 전후의 책임능력, 사전 약물 남용 여부, 모의성 등을 엄격히 심리해 감형 요건을 협소화하자는 것입니다. 일률적 감형을 지양하고 피해자 보호와 책임주의를 균형 있게 반영하려 했습니다. [출처: 1학년 국어(1학기)]",
-                subQuestions: [
+                id: "B-2",
+                title: "💜 B. 복지 제도 및 통합교육",
+                questions: [
                     {
-                        id: "3-1",
-                        question: "형법상 책임능력 판단과 어떻게 연결됩니까?",
-                        keywords: ["사물변별능력", "행위통제능력", "의학적·행동학적 자료", "현저 저하", "제한적 고려"],
-                        answer: "사물변별능력과 행위통제능력을 의학적·행동학적 자료로 구체 심리해 현저 저하가 입증된 경우에 한해 제한적으로 고려하자는 취지입니다. [출처: 1학년 국어(1학기)]"
+                        id: "B-2-Q",
+                        type: "main",
+                        text: "3. 시각장애 학생이 일반 교육과정을 이수해야 하는 이유는 무엇이라고 생각하나요?",
+                        keywords: "교육권 보장, 차별 해소, 사회적 차별, 통합사회, 기반",
+                        answer: "교육권 보장과 차별 해소를 위해서입니다. 특수교육만으로는 사회적 차별이 심화될 수 있으며, 일반 교육 속에서 함께 배우는 경험이 통합사회의 기반이 된다고 생각합니다. [3학년 진로활동]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "B-2-QF",
+                        type: "followup",
+                        text: "3-1. 일반 교육과정 이수 시 학교가 준비해야 할 조건은 무엇인가요?",
+                        keywords: "점자 교재, 보조 인력, 접근 가능한 정보 시스템, 물리적 장치, 제도적 장치",
+                        answer: "점자 교재, 보조 인력, 접근 가능한 정보 시스템 등 물리적·제도적 장치가 먼저 마련되어야 합니다. [3학년 진로활동]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 4,
-                question: "공직자 윤리와 경찰의 도덕적 책무를 탐구했다고 했습니다. 법학 지원자로서 공정성을 어떻게 정의하고, 현장에서 어떻게 검증합니까?",
-                keywords: ["동일 기준", "일관 적용", "이해충돌 배제", "사건배당 기록 공개", "사전신고", "외부감사", "내부감찰"],
-                answer: "공정성은 동일 기준의 일관 적용과 이해충돌 배제입니다. 사건배당 기록 공개, 이해충돌 사전신고, 외부감사·내부감찰을 통해 검증해야 합니다. [출처: 3학년 생활과 윤리]",
-                subQuestions: [
+                id: "C-1",
+                title: "💚 C. 낙인효과 및 복지 인식",
+                questions: [
                     {
-                        id: "4-1",
-                        question: "원 스트라이크 아웃 제도의 한계와 보완은요?",
-                        keywords: ["위축효과", "오판 위험", "엄격한 사실심리", "적법절차 보장", "비위 유형별 차등화"],
-                        answer: "위축효과와 오판 위험이 있어 엄격한 사실심리, 적법절차 보장, 비위 유형별 차등화가 필요합니다. [출처: 3학년 생활과 윤리]"
+                        id: "C-1-Q",
+                        type: "main",
+                        text: "4. 기초생활보장제도에서 낙인효과를 탐구했다고 했는데, 탐구의 결론은 무엇이었나요?",
+                        keywords: "낙인, 사회적 소외, 인식 개선 교육, 대국민 캠페인, 시혜, 존엄 회복",
+                        answer: "낙인으로 인한 사회적 소외가 발생하므로, 인식 개선 교육과 대국민 캠페인이 필요하다고 결론을 내렸습니다. 복지는 시혜가 아니라 존엄 회복의 과정임을 깨달았습니다. [2학년 동아리활동]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "C-1-QF",
+                        type: "followup",
+                        text: "4-1. 복지의 본질에 대해 새롭게 깨달은 점은 무엇인가요?",
+                        keywords: "국가가 돕는 일, 모든 사람이 누릴 권리, 복지의 주체, 대상자, 시민",
+                        answer: "복지는 '국가가 돕는 일'이 아니라 '모든 사람이 누릴 권리'라는 점입니다. 복지의 주체는 대상자가 아니라 시민 모두라는 관점을 가지게 되었습니다. [2학년 동아리활동]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 5,
-                question: "사형제에 찬성 논증을 했는데, 반대 논거를 스스로 최적으로 제시하고 반박해 보세요.",
-                keywords: ["오판 가능성", "일반예방 효과", "증거법·포렌식 고도화", "다심제 심리", "특수예방", "응보정의", "제한적 유지"],
-                answer: "반대 논거는 오판 가능성과 일반예방 효과 불확실성입니다. 이에 대해 증거법·포렌식 고도화와 다심제 심리로 오판 위험을 낮추고, 극악범죄에 한정해 특수예방과 응보정의를 고려하는 제한적 유지가 가능하다고 봅니다. [출처: 3학년 생활과 윤리]",
-                subQuestions: [
+                id: "D-1",
+                title: "💛 D. 정서 지원 프로그램",
+                questions: [
                     {
-                        id: "5-1",
-                        question: "입학 후 연구 결과에 따라 입장이 바뀐다면요?",
-                        keywords: ["집행오류", "효과성 증거", "무기형 대체", "증거 중심", "입장 수정"],
-                        answer: "집행오류·효과성 증거를 더 학습해 무기형 대체가 더 합리적이면 증거 중심으로 입장을 수정하겠습니다. [출처: 3학년 생활과 윤리]"
+                        id: "D-1-Q",
+                        type: "main",
+                        text: "5. 스트레스볼 만들기 활동이 학생 정서에 어떤 효과를 주었다고 생각하나요?",
+                        keywords: "직접 만들기, 몰입, 안정감, 성취감, 긍정적 정서",
+                        answer: "직접 손으로 만들며 몰입하는 과정에서 안정감이 생겼고, 완성 후 성취감을 통해 긍정적 정서가 강화되었습니다. [3학년 진로활동]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "D-1-QF",
+                        type: "followup",
+                        text: "5-1. 프로그램을 운영할 때 가장 중요한 점은 무엇이라고 생각하나요?",
+                        keywords: "참여자의 집중도, 시간 효율, 과정 단순화, 즉각적인 체험",
+                        answer: "참여자의 집중도와 시간 효율입니다. 과정을 단순화하고 즉각적인 체험을 중심으로 설계하는 것이 필요합니다. [3학년 진로활동]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 6,
-                question: "DNA 감식 심화 발표를 했습니다. 개인정보·인권 침해를 줄이는 핵심 장치는 무엇입니까?",
-                keywords: ["채취·보관 단계 분리", "익명화·암호화", "목적 외 사용 금지", "보관기간 자동 폐기", "사전영장 원칙", "독립 감독기구"],
-                answer: "채취·보관 단계 분리와 익명화·암호화, 목적 외 사용 금지, 보관기간 자동 폐기, 사전영장 원칙과 독립 감독기구가 핵심입니다. [출처: 2학년 생명과학Ⅰ(2학기)]",
-                subQuestions: [
+                id: "E-1",
+                title: "🧡 E. 사회문제 및 제도 이해",
+                questions: [
                     {
-                        id: "6-1",
-                        question: "미제사건 해결을 위한 유전가계 데이터 활용에 대한 입장은요?",
-                        keywords: ["사전 명시 동의", "친족 비식별화", "중대범죄 한정", "사용 이력 감사", "정당화"],
-                        answer: "사전 명시 동의, 친족 비식별화, 중대범죄 한정, 사용 이력 감사가 전제될 때에만 정당화된다고 봅니다. [출처: 2학년 생명과학Ⅰ(2학기)]"
+                        id: "E-1-Q",
+                        type: "main",
+                        text: "6. 저출산·고령화가 연금 제도에 미치는 영향은 무엇인가요?",
+                        keywords: "부양 인구 감소, 수급자 증가, 연금 재정 악화, 미래 세대, 부담, 구조적 문제",
+                        answer: "부양 인구는 줄고 수급자는 늘어나 연금 재정이 악화됩니다. 미래 세대의 부담이 커지는 구조적 문제가 발생합니다. [3학년 화법과 작문]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "E-1-QF",
+                        type: "followup",
+                        text: "6-1. 이 문제를 해결하기 위한 복지적 접근은 무엇이라고 생각하나요?",
+                        keywords: "세대 간 재분배 원리, 기초연금, 사회안전망",
+                        answer: "세대 간 재분배 원리를 강화하고, 기초연금과 같은 사회안전망을 보완해야 합니다. [3학년 화법과 작문]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 7,
-                question: "O.J. 심슨 사건을 통해 조건부확률의 함정을 탐구했습니다. 법정에서 통계 남용을 막는 실무적 장치 한 가지는?",
-                keywords: ["전문가 진술", "사전확률", "기저율", "사후확률", "분리 설명", "우도비", "설명보충 절차"],
-                answer: "전문가 진술 시 사전확률(기저율)과 사후확률을 분리 설명하도록 의무화하고, 재판부가 우도비·기저율을 구분 이해하도록 설명보충 절차를 제도화합니다. [출처: 3학년 확률과 통계]",
-                subQuestions: [
+                id: "F-1",
+                title: "💙 F. 사회문화 ― 노인 고독사",
+                questions: [
                     {
-                        id: "7-1",
-                        question: "P(유죄|증거)와 P(증거|유죄)의 혼동을 한 문장으로 설명해 보세요.",
-                        keywords: ["유죄일 확률", "유죄일 때 그 증거가 나올 확률", "기저율", "대립가설 고려"],
-                        answer: "유죄일 확률과 유죄일 때 그 증거가 나올 확률은 다르며, 전자는 기저율과 대립가설 고려가 필수입니다. [출처: 3학년 확률과 통계]"
+                        id: "F-1-Q",
+                        type: "main",
+                        text: "7. 노인 고독사를 사회구조적으로 설명해 보세요.",
+                        keywords: "가족 구조 변화, 부양 체계 약화, 1인 가구 증가, 공적 돌봄 부족",
+                        answer: "가족 구조의 변화로 부양 체계가 약화되고, 1인 가구 증가 및 공적 돌봄 부족이 복합적으로 작용해 발생합니다. [3학년 사회문화]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "F-1-QF",
+                        type: "followup",
+                        text: "7-1. 이 문제 해결을 위해 복지 차원에서 가장 시급한 정책은 무엇인가요?",
+                        keywords: "AI 기반 건강 확인 시스템, 지역 커뮤니티 돌봄망",
+                        answer: "AI 기반 건강 확인 시스템 도입과 지역 커뮤니티 돌봄망 구축입니다. [3학년 사회문화]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 8,
-                question: "한·미 소년법 비교 에세이를 작성했습니다. 우리 제도의 강점과 보완점을 하나씩만 꼽아보세요.",
-                keywords: ["보호주의 원칙", "교정·교육 중심", "연령 기준", "성인이송 요건", "예측 가능성", "재범위험 평가도구", "표준화"],
-                answer: "강점은 보호주의 원칙에 따른 교정·교육 중심 접근, 보완점은 연령 기준과 성인이송 요건의 예측 가능성 제고 및 재범위험 평가도구의 표준화입니다. [출처: 2학년 영어권 문화]",
-                subQuestions: [
+                id: "G-1",
+                title: "💜 G. 생활과 윤리 ― 생명윤리와 자살관",
+                questions: [
                     {
-                        id: "8-1",
-                        question: "촉법소년 연령 하향에 대한 본인 입장은?",
-                        keywords: ["조건부 하향", "범죄 중대성", "반복성", "판단능력 평가", "부작용"],
-                        answer: "조건부 하향 찬성입니다. 범죄 중대성·반복성과 판단능력 평가를 결합해야 부작용을 줄일 수 있다고 봅니다. [출처: 2학년 진로활동(법탐구 프로그램)]"
+                        id: "G-1-Q",
+                        type: "main",
+                        text: "8. 흄·쇼펜하우어·칸트가 자살을 어떻게 바라봤는지 설명해 보세요.",
+                        keywords: "흄, 개인의 자유, 쇼펜하우어, 고통 회피의 욕망, 칸트, 도덕법칙 위반, 사회적 예방",
+                        answer: "흄은 개인의 자유로 보았고, 쇼펜하우어는 고통 회피의 욕망으로 해석했으며, 칸트는 도덕법칙 위반으로 봤습니다. 저는 사회가 예방에 나서야 한다는 입장입니다. [3학년 생활과 윤리]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "G-1-QF",
+                        type: "followup",
+                        text: "8-1. 사회가 자살을 적극적으로 예방해야 하는 이유는 무엇인가요?",
+                        keywords: "개인의 자유, 생명 보호, 가치, 심리적 고통, 지원체계",
+                        answer: "개인의 자유보다 생명 보호의 가치가 우선되며, 사회가 심리적 고통을 완화할 지원체계를 마련해야 하기 때문입니다. [3학년 생활과 윤리]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 9,
-                question: "브라질 파벨라 치안정책과 총기범죄를 탐구했습니다. 국내 적용 가능한 커뮤니티 폴리싱 한 가지를 제안해 보세요.",
-                keywords: ["자율방범 활동", "지역경찰 협업", "제도화", "생활범죄 사전조정", "데이터 기반 순찰 공개"],
-                answer: "자율방범 활동과 지역경찰 협업을 제도화해 생활범죄 사전조정과 데이터 기반 순찰 공개를 도입하겠습니다. [출처: 2학년 세계지리, 2학년 영어권 문화(Neighborhood Watch 비교)]",
-                subQuestions: [
+                id: "G-2",
+                title: "💜 G. 생활과 윤리 ― 생명윤리와 자살관",
+                questions: [
                     {
-                        id: "9-1",
-                        question: "주민 참여를 끌어낼 인센티브는 무엇이 효과적일까요?",
-                        keywords: ["참여 마일리지", "보험료 소액 할인", "지역 포인트 연계", "비금전·소액금전 인센티브", "혼합"],
-                        answer: "참여 마일리지, 보험료 소액 할인, 지역 포인트 연계 등 비금전·소액금전 인센티브의 혼합이 현실적입니다. [출처: 2학년 세계지리]"
+                        id: "G-2-Q",
+                        type: "main",
+                        text: "9. 안락사 논의에서 인간의 존엄을 어떻게 해석하나요?",
+                        keywords: "생명 연장, 삶을 결정할 권리, 존중, 존엄",
+                        answer: "단순히 생명을 연장하는 것이 아닌, 인간이 스스로의 삶을 결정할 권리를 존중하는 데 존엄이 있다고 봅니다. [3학년 생활과 윤리]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 10,
-                question: "플라톤 국가를 심화 독서했습니다. 그 정의 개념을 현대 헌법 질서의 정의 관념과 어떻게 연결합니까?",
-                keywords: ["각자 할 일", "기본권 보장", "권력통제", "절차적 정당성", "실체적 정의", "절차적 정의", "균형"],
-                answer: "플라톤의 각자 할 일로서의 정의는 현대에선 기본권 보장과 권력통제, 절차적 정당성으로 재해석됩니다. 실체적 정의와 절차적 정의의 균형을 지향하겠습니다. [출처: 2학년 윤리와 사상(고전독서탐구)]",
-                subQuestions: [
+                id: "I-1",
+                title: "💚 I. 융합수업 ― 아동 방임",
+                questions: [
                     {
-                        id: "10-1",
-                        question: "절차적 정의의 최소 요건을 한 문장으로 말해보세요.",
-                        keywords: ["적법절차", "청문", "이유제시", "불복절차 보장", "최소 요건"],
-                        answer: "적법절차, 청문, 이유제시, 불복절차 보장이 최소 요건입니다. [출처: 2학년 윤리와 사상]"
+                        id: "I-1-Q",
+                        type: "main",
+                        text: "10. 아동 방임의 원인 중 가장 심각한 요인은 무엇인가요?",
+                        keywords: "부모의 스트레스, 역할 수행 실패, 사회심리학적 원인",
+                        answer: "부모의 스트레스 상황에서 역할 수행이 실패하는 사회심리학적 원인입니다. [3학년 융합수업]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "I-1-QF",
+                        type: "followup",
+                        text: "10-1. 이 문제를 예방하기 위한 교내 실천 방안은 무엇인가요?",
+                        keywords: "예비 부모 교육, 체험형, 양육 상황, 시뮬레이션, 책임감",
+                        answer: "예비 부모 교육을 체험형으로 운영하고, 학생이 직접 양육 상황을 시뮬레이션하며 책임감을 배우도록 설계해야 합니다. [3학년 융합수업]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 11,
-                question: "범죄 피해자 가족 복지 서비스 발표에서 확인한 사각지대와 보완책을 말해보세요.",
-                keywords: ["정보 접근의 어려움", "원스톱 포털", "연계기관 안내", "의무화", "지자체 전담 창구", "확충"],
-                answer: "정보 접근의 어려움이 컸습니다. 원스톱 포털과 연계기관 안내 의무화, 지자체 전담 창구 확충이 필요합니다. [출처: 3학년 심리학(수업량 유연화 융합수업)]",
-                subQuestions: [
+                id: "V-1",
+                title: "🧩 V. 심리학 ― 공감과 상담기술",
+                questions: [
                     {
-                        id: "11-1",
-                        question: "예산 제약이 있다면 우선순위는 무엇입니까?",
-                        keywords: ["심리치료", "생계비", "직접 지원", "홍보·인프라", "단계적 확대"],
-                        answer: "심리치료·생계비 같은 직접 지원을 우선하고, 이후 홍보·인프라를 단계적으로 확대합니다. [출처: 3학년 심리학]"
+                        id: "V-1-Q",
+                        type: "main",
+                        text: "11. 상담 상황에서 내담자의 페르소나 뒤 진짜 감정을 어떻게 파악하나요?",
+                        keywords: "비언어 신호, 표정, 시선, 몸짓, 개방형 질문",
+                        answer: "언어보다 표정, 시선, 몸짓 같은 비언어 신호를 주의 깊게 관찰하고, 개방형 질문으로 내담자가 스스로 이야기하도록 이끕니다. [3학년 심리학]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "V-1-QF",
+                        type: "followup",
+                        text: "11-1. 첫 면담에서 신뢰를 형성하기 위해 사용할 질문 한 가지를 예로 들어보세요.",
+                        keywords: "감정 중심 질문, 자연스러운 대화",
+                        answer: "'최근에 마음이 편안했던 순간이 언제였나요?' 같은 감정 중심 질문으로 자연스러운 대화를 엽니다. [3학년 심리학]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 12,
-                question: "본인의 ISTJ 성향이 법학·경찰행정 분야에 어떤 강점으로 작용합니까?",
-                keywords: ["사실 기반 판단", "규범 준수", "체계적 기록", "증거·절차", "중시"],
-                answer: "사실 기반 판단, 규범 준수, 체계적 기록에 강점이 있어 증거·절차를 중시하는 업무에 적합합니다. [출처: 3학년 심리학(MBTI 자기분석)]",
-                subQuestions: [
+                id: "V-2",
+                title: "🧩 V. 심리학 ― 공감과 상담기술",
+                questions: [
                     {
-                        id: "12-1",
-                        question: "고집·경직이라는 단점은 어떻게 보완하나요?",
-                        keywords: ["토론·세미나", "반대 논거", "스틸맨 연습", "인지적 유연성", "훈련"],
-                        answer: "토론·세미나에서 반대 논거 스틸맨 연습을 통해 인지적 유연성을 훈련하겠습니다. [출처: 3학년 심리학]"
+                        id: "V-2-Q",
+                        type: "main",
+                        text: "12. '어른 자아(Adult Ego State)'가 중요한 이유는 무엇이라고 생각하나요?",
+                        keywords: "감정, 사실, 정보, 합리적 판단, 관계 안정",
+                        answer: "감정이 아닌 사실과 정보를 기반으로 합리적인 판단을 가능하게 해 관계를 안정시키기 때문입니다. [3학년 심리학]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 13,
-                question: "법학을 공부하는 데 필요한 핵심 역량은 무엇이라고 생각하나요?",
-                keywords: ["논리적 사고력", "공정한 판단력", "근거 중심의 사고", "객관적 판단", "정의로운 법 집행"],
-                answer: "저는 법학을 공부하는 데 필요한 핵심 역량은 논리적 사고력과 공정한 판단력이라고 생각합니다. 법은 다양한 이해관계 속에서 올바른 결정을 내려야 하므로, 감정이 아닌 근거 중심의 사고가 중요합니다. 또 상황을 객관적으로 판단하는 태도가 정의로운 법 집행의 출발점이 된다고 생각합니다. [출처: 2026 대입 면접 전략 자료집(경남교육청) p.31]",
-                subQuestions: [
+                id: "N-1",
+                title: "💛 N/O/P/W. 자율활동·동아리·리더십",
+                questions: [
                     {
-                        id: "13-1",
-                        question: "그 역량을 기르기 위해 어떤 노력을 해왔나요?",
-                        keywords: ["청소년 조건만남 예방", "심신 미약 감형 법안", "논리적 사고력", "인과관계", "법적 근거", "사회적 영향"],
-                        answer: "저는 2학년 사회 과제 연구 시간에 '청소년 조건만남 예방 및 치유 방안'을 주제로 보고서를 작성하며 논리적 사고력을 길렀습니다. 연구 과정에서 다양한 자료를 분석하고, 원인과 해결책을 인과관계 중심으로 정리하려 노력했습니다. 또 1학년 때는 '심신 미약 감형 법안의 문제점'을 주제로 토론을 진행하면서, 법적 근거와 사회적 영향 양쪽을 함께 고려하는 연습을 했습니다. 이런 활동을 통해 논리적인 사고와 공정한 판단력을 실제로 적용할 수 있었습니다. [출처: 2023-2025 대학별 면접 기출문제 정리(안양고 도창준) / 학생부 세부능력특기사항 – 사회 과제 연구, 국어 / 경남교육청 면접 자료집 p.32]"
+                        id: "N-1-Q",
+                        type: "main",
+                        text: "13. 부반장으로 활동하며 배운 점은 무엇인가요?",
+                        keywords: "리더십, 명령, 배려, 불편, 관계, 신뢰",
+                        answer: "리더십은 명령이 아니라 배려라는 것을 깨달았습니다. 친구들의 불편을 세심히 살피며 관계 속 신뢰의 가치를 배웠습니다. [1학년 자율활동]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 14,
-                question: "법과 정의가 충돌할 때 어떤 선택을 해야 한다고 생각하나요?",
-                keywords: ["절차적 정의", "우선", "공정한 절차", "결과의 정당성", "확보"],
-                answer: "저는 법과 정의가 충돌할 때 절차적 정의를 우선해야 한다고 생각합니다. 법이 정의를 실현하기 위한 도구라면, 그 도구가 공정한 절차를 거쳐야만 결과의 정당성이 확보된다고 생각합니다. [출처: 경남교육청 면접 전략 자료집 p.33]",
-                subQuestions: [
+                id: "O-1",
+                title: "💛 N/O/P/W. 자율활동·동아리·리더십",
+                questions: [
                     {
-                        id: "14-1",
-                        question: "실제 사례를 들어 설명해볼 수 있을까요?",
-                        keywords: ["심신미약 감형 법안", "발표", "책임능력 판단 절차", "다양한 시각", "절차적 공정성", "감정이 아닌 공정한 법적 절차"],
-                        answer: "1학년 국어 시간에 '심신미약 감형 법안'에 대해 발표하며, 단순한 감정적 판단보다 책임능력 판단 절차의 중요성을 배웠습니다. 당시 저는 감형 폐지를 주장했지만, 토론을 통해 다양한 시각을 접하면서 절차적 공정성이 왜 중요한지 깨달았습니다. 이 경험을 통해 정의는 감정이 아니라 공정한 법적 절차에서 출발해야 한다는 점을 실감했습니다. [출처: 생활기록부 세부능력특기사항(1학년 국어) / 2026 대입 면접 전략 자료집 p.34]"
+                        id: "O-1-Q",
+                        type: "main",
+                        text: "14. 교육청 차원의 봉사활동 프로젝트에서 리더로서 가장 어려웠던 점은 무엇이었나요?",
+                        keywords: "팀 의견, 충돌, 경청, 절충안, 조율",
+                        answer: "팀 의견이 충돌할 때였습니다. 저는 모든 팀원의 의견을 경청하고, 절충안을 찾아 조율했습니다. [2학년 자율활동]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 15,
-                question: "최근 이슈 중에서 법의 역할이 중요했다고 생각하는 사건을 하나 말해보세요.",
-                keywords: ["보이스피싱 범죄", "예방적 법 제도", "중요"],
-                answer: "저는 '보이스피싱 범죄'가 법의 역할이 중요한 사건이라고 생각합니다. 단순한 처벌보다 예방적 법 제도가 중요하다는 것을 느꼈습니다. [출처: 전남교육청 면접자료 정리해DREAM p.45]",
-                subQuestions: [
+                id: "P-1",
+                title: "💛 N/O/P/W. 자율활동·동아리·리더십",
+                questions: [
                     {
-                        id: "15-1",
-                        question: "그 사건에서 법의 한계나 문제점은 무엇이었다고 생각하나요?",
-                        keywords: ["보이스피싱 범죄", "분석", "발표", "범죄 인식", "현행 법의 홍보", "실효성", "사전 예방 교육", "제도 홍보 강화"],
-                        answer: "3학년 영어 수업 시간에 보이스피싱 범죄를 분석하고 발표했습니다. 피해자 대부분이 범죄를 인식하지 못한 채 피해를 입는다는 점에서, 현행 법의 홍보와 실효성이 부족하다는 문제를 느꼈습니다. 범죄자 단속보다 국민 대상 사전 예방 교육과 제도 홍보 강화가 법의 역할로 더 중요하다고 생각합니다. [출처: 생활기록부 세부능력특기사항(3학년 영어) / 2025 면접자료 정리해DREAM(전남교육청) p.47]"
+                        id: "P-1-Q",
+                        type: "main",
+                        text: "15. 『나는 왜 친구와 있어도 불편할까?』를 읽고 얻은 깨달음은 무엇인가요?",
+                        keywords: "타인, 눈치, 관계의 불안, 자연스러운 현상, 진심, 표현, 용기",
+                        answer: "'타인도 나만큼 눈치를 본다'는 구절이 인상 깊었습니다. 관계의 불안은 자연스러운 현상이며, 진심을 표현할 용기가 관계를 바꾼다는 걸 배웠습니다. [1학년 독서]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 16,
-                question: "법학을 공부하며 가장 관심 있는 분야(예: 형법, 헌법 등)는 무엇인가요?",
-                keywords: ["형법", "사회질서 유지", "정의 실현", "균형"],
-                answer: "저는 형법에 가장 관심이 많습니다. 법학 중에서도 형법은 사회질서 유지와 정의 실현의 균형을 다루는 분야이기 때문입니다. [출처: 경기도교육청 면접자료집 p.27]",
-                subQuestions: [
+                id: "W-1",
+                title: "💛 N/O/P/W. 자율활동·동아리·리더십",
+                questions: [
                     {
-                        id: "16-1",
-                        question: "그 분야를 통해 이루고 싶은 목표가 있나요?",
-                        keywords: ["범죄 심리 탐구 보고서", "범죄의 원인", "재범 방지 대책", "피해자와 가해자", "시각", "범죄 예방", "피해자 보호", "경찰관"],
-                        answer: "2학년 때 '범죄 심리 탐구 보고서'를 작성하며 범죄의 원인과 재범 방지 대책을 조사했습니다. 당시 피해자와 가해자 모두의 시각을 고려하려 노력하면서, 형법을 공부해 범죄 예방과 피해자 보호를 병행할 수 있는 경찰관이 되고 싶다고 생각했습니다. [출처: 생활기록부 세부능력특기사항(2학년 사회 과제 연구) / 2026 대입 면접 전략 자료집 p.36]"
+                        id: "W-1-Q",
+                        type: "main",
+                        text: "16. 또래압력 설문을 진행하며 느낀 점은 무엇인가요?",
+                        keywords: "또래압력, 인식, 청소년 문제, 예방 교육",
+                        answer: "친구들 대부분이 또래압력을 인식하지 못한 채 행동하고 있음을 깨달았습니다. 사회복지사로서 청소년 문제 예방 교육의 중요성을 느꼈습니다. [1학년 동아리활동]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 17,
-                question: "바람개비 전형에서 강조하는 '균형 잡힌 인재상'에 자신이 부합한다고 생각하는 이유는 무엇인가요?",
-                keywords: ["학업과 인성", "진로탐구", "균형", "법·사회 문제", "심화탐구", "봉사활동", "조별 발표", "협업 능력", "책임감"],
-                answer: "저는 학업과 인성, 진로탐구를 균형 있게 발전시켜 왔다고 생각합니다. 학업적으로는 법·사회 문제를 주제로 심화탐구를 진행했고, 인성 측면에서는 봉사활동과 조별 발표를 통해 협업 능력과 책임감을 길렀습니다. [출처: 전남교육청 면접자료집 p.42]",
-                subQuestions: [
+                id: "X-1",
+                title: "❤️ X. 진로 변화",
+                questions: [
                     {
-                        id: "17-1",
-                        question: "그 균형을 유지하기 위해 노력한 경험이 있나요?",
-                        keywords: ["범죄 피해자 가족 지원 제도", "조사", "학업과 봉사", "병행", "지역 아동센터 봉사", "지적 탐구", "공동체적 실천", "균형"],
-                        answer: "3학년 심리학 수업에서 '범죄 피해자 가족 지원 제도'를 조사하며, 학업과 봉사를 병행했습니다. 당시 지역 아동센터 봉사를 꾸준히 하면서 동시에 보고서를 완성했고, 이를 통해 지적 탐구와 공동체적 실천의 균형이 중요하다는 것을 배웠습니다. [출처: 생활기록부 세부능력특기사항(3학년 심리학) / 전남교육청 면접자료집 p.44]"
+                        id: "X-1-Q",
+                        type: "main",
+                        text: "17. 경찰행정학과에서 사회복지학과로 진로를 바꾸게 된 이유는 무엇인가요?",
+                        keywords: "정의 실현, 경찰, 봉사, 사람의 변화, 가치",
+                        answer: "정의를 실현하는 직업으로서 경찰에 매력을 느꼈지만, 직접 봉사를 하며 '사람의 변화를 돕는 일'에 더 큰 가치를 느꼈습니다. [1학년 진로활동 / 2학년 자율활동]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "X-1-QF",
+                        type: "followup",
+                        text: "17-1. 사회복지학과 진학 후 배우고 싶은 세부 분야는 무엇인가요?",
+                        keywords: "정신 사회복지, 감정, 심리, 상담, 정책, 삶의 회복",
+                        answer: "정신 사회복지 분야입니다. 사람의 감정과 심리를 이해하고 상담·정책을 융합하여 삶의 회복을 돕는 복지사가 되고 싶습니다. [3학년 진로활동 / 심리학]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 18,
-                question: "경찰과 법학의 관계를 본인의 진로와 연결해서 설명해보세요.",
-                keywords: ["법을 현장에서 집행", "근거", "학문"],
-                answer: "경찰은 법을 현장에서 집행하는 직업이기 때문에, 법학은 경찰의 판단과 행동에 근거가 되는 학문이라고 생각합니다. [출처: 경남교육청 면접전략 자료집 p.38]",
-                subQuestions: [
+                id: "B-3",
+                title: "💜 B. 복지 제도 및 통합교육",
+                questions: [
                     {
-                        id: "18-1",
-                        question: "법학적 지식을 경찰 업무에 어떻게 활용할 수 있다고 생각하나요?",
-                        keywords: ["법탐구 프로그램", "소년법과 형사정책", "비교 연구", "인권 보호", "재범 방지", "제도", "형법과 형사소송법", "절차적 정의", "수사 과정"],
-                        answer: "2학년 법탐구 프로그램에 참여하면서 '소년법과 형사정책'을 비교 연구했습니다. 이를 통해 법이 단순히 처벌이 아니라 인권 보호와 재범 방지를 위한 제도라는 점을 배웠습니다. 형법과 형사소송법을 공부해 수사 과정에서 절차적 정의를 지키는 경찰이 되고 싶습니다. [출처: 생활기록부 세부능력특기사항(2학년 진로활동 – 법탐구 프로그램) / 2026 대입 면접전략 자료집(경남교육청) p.38]"
+                        id: "B-3-Q",
+                        type: "main",
+                        text: "18. 배리어프리의 의미를 본인은 어떻게 정의하나요?",
+                        keywords: "신체적 장벽, 사회적 장벽, 심리적 장벽, 차별 해소, 접근권 보장, 사회적 약속",
+                        answer: "배리어프리는 신체적, 사회적, 심리적 장벽을 제거해 누구나 차별 없이 살아갈 수 있도록 하는 개념입니다. 단순히 장애인의 편의를 위한 것이 아니라, 모두의 접근권을 보장하는 사회적 약속이라고 생각합니다. [3학년 자율활동]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "B-3-QF",
+                        type: "followup",
+                        text: "18-1. 학교에서 실천 가능한 배리어프리의 예시를 하나 들어보세요.",
+                        keywords: "점자 표지, 음성 공지 시스템, 휠체어 동선, 접근성 개선",
+                        answer: "시각장애 학생을 위한 점자 표지 설치, 음성 공지 시스템 구축, 휠체어 이동 동선 확보 등이 있습니다. [3학년 자율활동]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 19,
-                question: "성무선악설의 관점에서 범죄 문제를 해석했다고 하는데, 왜 성무선악설을 주장했나요?",
-                keywords: ["선하거나 악한 본성", "타고남", "성장 환경", "사회적 경험", "형성", "정남규 연쇄살인사건", "유년기 학대", "방임", "범죄심리", "후천적 요인"],
-                answer: "저는 모든 인간은 선하거나 악한 본성을 타고난 것이 아니라, 성장 환경과 사회적 경험을 통해 형성된다고 생각합니다. 1학년 '윤리와 사상' 수업 시간에 정남규 연쇄살인사건을 사례로 분석하면서, 범죄자의 유년기 학대와 방임이 범죄심리에 미친 영향을 탐구했습니다. 이 과정에서 인간의 행위는 후천적 요인에 의해 변화할 수 있다는 점을 실감했고, 그래서 성무선악설의 입장을 주장했습니다. [출처: 생활기록부 세부능력특기사항(1학년 윤리와 사상) / 경남교육청 「2026 대입 면접 전략 자료집」 p.33]",
-                subQuestions: [
+                id: "C-2",
+                title: "💚 C. 낙인효과 및 복지 인식",
+                questions: [
                     {
-                        id: "19-1",
-                        question: "그렇다면 동일한 환경에서도 범죄자가 되지 않는 사람들은 어떻게 설명할 수 있을까요?",
-                        keywords: ["환경이 모든 것을 결정", "개인이 선택하는 방식", "사회적 지지망", "환경이 영향을 주지만", "개인의 판단", "주변의 제도적 지원", "함께 작용"],
-                        answer: "환경이 모든 것을 결정한다고 보긴 어렵습니다. 같은 환경에서도 개인이 선택하는 방식과 사회적 지지망이 다릅니다. 따라서 환경이 영향을 주지만, 개인의 판단과 주변의 제도적 지원이 함께 작용한다고 생각합니다. [출처: 생활기록부 세부능력특기사항(1학년 윤리와 사상, 사회탐구 보고서)]"
+                        id: "C-2-Q",
+                        type: "main",
+                        text: "19. 복지제도의 역효과를 조사했다고 했는데, 구체적인 사례를 들어 주세요.",
+                        keywords: "임대아파트, 수급자, 차별, 사회적 배제, 복지제도 역효과",
+                        answer: "임대아파트 수급자가 같은 단지 주민으로부터 차별을 받는 사례를 다뤘습니다. 복지제도의 취지가 잘못된 인식으로 인해 오히려 사회적 배제와 불편을 낳을 수 있음을 확인했습니다. [2학년 동아리활동]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 20,
-                question: "깨진 유리창 이론을 탐구했다고 했는데, 이 이론이 경찰 업무에 어떤 의미가 있다고 생각하나요?",
-                keywords: ["작은 무질서", "방치", "더 큰 범죄", "경고", "청소년 조건만남 예방", "초기 단계", "개입", "예방 중심의 사고"],
-                answer: "깨진 유리창 이론은 작은 무질서를 방치하면 더 큰 범죄로 이어질 수 있다는 경고입니다. 저는 2학년 사회 과제 연구에서 '청소년 조건만남 예방'을 주제로 연구했는데, 초기 단계에서의 개입이 얼마나 중요한지를 느꼈습니다. 이 경험을 통해 깨진 유리창 이론이 경찰에게는 경미한 범죄라도 조기에 대응하는 예방 중심의 사고가 필요하다는 것을 깨달았습니다. [출처: 생활기록부 세부능력특기사항(2학년 사회 과제 연구) / 전남교육청 「2025 면접자료 정리해DREAM」 p.45]",
-                subQuestions: [
+                id: "D-2",
+                title: "💛 D. 정서 지원 프로그램",
+                questions: [
                     {
-                        id: "20-1",
-                        question: "이 이론을 적용해 우리 사회의 특정 문제를 개선할 수 있다면 어떤 사례가 있을까요?",
-                        keywords: ["학교폭력 예방", "작은 언어폭력", "따돌림", "초기에 방치", "신체적 폭력", "확대", "사소한 갈등", "제도적으로 관리", "큰 범죄 예방"],
-                        answer: "학교폭력 예방에 적용할 수 있다고 생각합니다. 작은 언어폭력이나 따돌림을 초기에 방치하면 신체적 폭력으로 확대될 수 있기 때문입니다. 따라서 학교 내 사소한 갈등부터 제도적으로 관리하는 것이 큰 범죄 예방으로 이어집니다. [출처: 생활기록부 세부능력특기사항(2학년 사회 과제 연구 – 청소년 문제 탐구)]"
+                        id: "D-2-Q",
+                        type: "main",
+                        text: "20. 프로그램을 다시 운영한다면 어떤 부분을 개선하겠습니까?",
+                        keywords: "제작 시간 효율, 감정 일지, 효과 정량화, 참여자 피드백",
+                        answer: "제작 시간의 효율을 높이고, 참여자의 감정 변화를 기록하는 '감정 일지'를 추가하여 효과를 정량화하고 싶습니다. [3학년 진로활동]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 21,
-                question: "원 스트라이크 아웃제에 대해 탐구했다고 했는데, 이 제도에 찬성하는 이유는 무엇인가요?",
-                keywords: ["공직 사회", "부정부패", "국민의 신뢰", "무너뜨리는", "심각한 문제", "위법행위", "즉각적으로 책임", "경찰", "국민의 신뢰", "높은 윤리 기준", "공정성과 책임성", "강화"],
-                answer: "저는 공직 사회에서 부정부패는 국민의 신뢰를 무너뜨리는 심각한 문제라고 생각합니다. 따라서 한 번의 위법행위에도 즉각적으로 책임을 묻는 원 스트라이크 아웃제가 필요하다고 봅니다. 특히 경찰은 국민의 신뢰로 존재하는 직업이기 때문에, 높은 윤리 기준이 필수적입니다. 이 제도는 경찰조직이 스스로의 공정성과 책임성을 강화할 수 있는 방법이라고 생각합니다. [출처: 생활기록부 세부능력특기사항(3학년 생활과 윤리, 진로활동 경찰윤리 발표) / 경남교육청 면접전략 자료집 p.38]",
-                subQuestions: [
+                id: "E-2",
+                title: "🧡 E. 사회문제 및 제도 이해",
+                questions: [
                     {
-                        id: "21-1",
-                        question: "이 제도의 한계나 보완점이 있다면 무엇이라고 생각하나요?",
-                        keywords: ["모든 위반행위", "같은 수준", "처리", "비례성의 원칙", "훼손", "위법의 정도", "경중을 구분", "사실관계", "명확히 입증", "장치"],
-                        answer: "모든 위반행위가 같은 수준으로 처리되면 오히려 비례성의 원칙이 훼손될 수 있습니다. 따라서 위법의 정도에 따라 경중을 구분하고, 사실관계가 명확히 입증된 경우에만 적용하는 장치가 필요하다고 생각합니다. [출처: 생활기록부 세부능력특기사항(3학년 생활과 윤리 – 사회 규범 토론 활동)]"
+                        id: "E-2-Q",
+                        type: "main",
+                        text: "21. 핀란드식 혼합형 연금 제도에서 배울 점은 무엇인가요?",
+                        keywords: "공공성, 자율성, 다층적 안정망, 불평등 심화, 경계",
+                        answer: "공공성과 자율성을 함께 보장한다는 점입니다. 다만 고소득층 중심의 사적연금 확산이 불평등을 심화시킬 수 있다는 점을 경계해야 합니다. [3학년 화법과 작문]",
+                        userAnswer: ""
                     }
                 ]
             },
             {
-                id: 22,
-                question: "경찰공무원으로서 어떤 역할을 하고 싶은지, 구체적인 직무나 활동을 예로 들어 설명해 보세요.",
-                keywords: ["실제 범죄 현장", "출동", "사건을 수사", "법의 원리", "판단", "형사과 경찰", "범죄 심리 탐구", "범죄자의 심리", "행동 패턴", "분석", "법적 절차", "인권 보호", "국민의 안전", "정당하게 집행"],
-                answer: "저는 실제 범죄 현장에 출동해 사건을 수사하고, 법의 원리에 따라 판단하는 형사과 경찰이 되고 싶습니다. 2학년 때 '범죄 심리 탐구'를 진행하면서 범죄자의 심리와 행동 패턴을 분석했고, 이를 통해 수사과정에서도 법적 절차를 준수하면서 인권을 보호하는 경찰의 중요성을 느꼈습니다. 국민의 안전을 지키되, 법의 한계 안에서 정당하게 집행하는 경찰이 되고 싶습니다. [출처: 생활기록부 세부능력특기사항(2학년 사회 과제 연구 – 범죄심리탐구) / 전남교육청 면접자료 정리해DREAM p.46]",
-                subQuestions: [
+                id: "F-2",
+                title: "💙 F. 사회문화 ― 노인 고독사",
+                questions: [
                     {
-                        id: "22-1",
-                        question: "경찰의 역할 중 '법 집행자'로서 가장 중요한 덕목은 무엇이라고 생각하나요?",
-                        keywords: ["공정성", "법의 집행", "특정 감정", "편견", "영향", "객관적 근거", "판단", "토론 활동", "근거 중심의 사고훈련"],
-                        answer: "저는 '공정성'이라고 생각합니다. 법의 집행이 특정 감정이나 편견에 영향을 받지 않기 위해서는 객관적 근거에 기반한 판단이 필요합니다. 이를 위해 저는 학교에서 토론 활동을 통해 항상 근거 중심의 사고훈련을 해왔습니다. [출처: 생활기록부 세부능력특기사항(1학년 국어 – 사회문제 토론활동) / 경남교육청 면접전략 자료집 p.37]"
+                        id: "F-2-Q",
+                        type: "main",
+                        text: "22. 뒤르켐의 자살론으로 노인 고독사를 어떻게 설명할 수 있나요?",
+                        keywords: "이기적 자살, 사회적 통합, 가족 단절, 지역공동체 단절",
+                        answer: "사회적 통합이 약할수록 자살 위험이 커지는 '이기적 자살'로 설명할 수 있습니다. 가족 및 지역공동체의 단절이 원인입니다. [3학년 사회·문화]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "F-2-QF",
+                        type: "followup",
+                        text: "22-1. 같은 이론을 청소년 문제에 적용한다면 어떤 시사점이 있나요?",
+                        keywords: "청소년 고립, 학교 부적응, 통합 부족, 사회적 연결",
+                        answer: "청소년의 사회적 고립과 학교 부적응도 통합 부족에서 비롯된 문제로 볼 수 있습니다. [3학년 사회·문화]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "G-3",
+                title: "💜 G. 생활과 윤리 ― 생명윤리와 자살관",
+                questions: [
+                    {
+                        id: "G-3-Q",
+                        type: "main",
+                        text: "23. 본인이 가장 공감하는 관점은 무엇인가요?",
+                        keywords: "사회적 책임, 개인 선택, 사회적 절망, 지원체계",
+                        answer: "사회적 책임의 관점입니다. 개인의 선택 이전에 사회가 절망을 줄여야 한다고 생각합니다. [3학년 생활과 윤리]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "H-1",
+                title: "🧩 H. 교육 및 제도",
+                questions: [
+                    {
+                        id: "H-1-Q",
+                        type: "main",
+                        text: "24. 학교폭력이 개인 문제가 아닌 사회 구조 문제라고 생각한 이유는?",
+                        keywords: "학교 문화, 제도 미비, 형식적 예방 교육, 미온적 처벌, 구조적 문제",
+                        answer: "개인 성향보다 학교 문화와 제도의 미비가 더 큰 영향을 미친다고 봅니다. 형식적 예방 교육과 미온적 처벌이 문제입니다. [3학년 교육학]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "H-1-QF",
+                        type: "followup",
+                        text: "24-1. 구조적 해결을 위한 첫걸음은 무엇이라고 생각하나요?",
+                        keywords: "피해자 보호, 매뉴얼 강화, 2차 피해 방지, 시스템 구축",
+                        answer: "피해자 보호 중심의 매뉴얼 강화와 2차 피해 방지 시스템 구축이 필요합니다. [3학년 교육학]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "H-2",
+                title: "🧩 H. 교육 및 제도",
+                questions: [
+                    {
+                        id: "H-2-Q",
+                        type: "main",
+                        text: "25. 실효성 있는 학교폭력 예방을 위해 어떤 점이 보완되어야 할까요?",
+                        keywords: "개별 데이터, 정서 모니터링, AI 상담, 연계 시스템",
+                        answer: "학생 개별 데이터 기반의 정서 모니터링과 AI 상담 연계 시스템이 필요합니다. [3학년 교육학]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "I-2",
+                title: "💚 I. 융합수업 ― 아동 방임",
+                questions: [
+                    {
+                        id: "I-2-Q",
+                        type: "main",
+                        text: "26. 방임과 유기의 차이를 간단히 설명해 보세요.",
+                        keywords: "방임, 유기, 보호자 존재, 양육 소홀, 보호 의무 포기, 기본권 침해",
+                        answer: "방임은 보호자가 존재하지만 양육과 돌봄을 소홀히 하는 것이고, 유기는 아예 보호 의무를 포기하고 떠나는 것입니다. 둘 다 아동의 기본권 침해이지만 행위의 지속성과 고의성에서 차이가 있습니다. [3학년 융합수업]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "J-1",
+                title: "🧩 J. 아동 보호 모델 및 제도",
+                questions: [
+                    {
+                        id: "J-1-Q",
+                        type: "main",
+                        text: "27. Barnahus 모델의 장점은 무엇이라고 생각하나요?",
+                        keywords: "경찰, 검찰, 사회복지사, 상담사, 의료진, 협력, 2차 피해 최소화",
+                        answer: "Barnahus는 경찰, 검찰, 사회복지사, 상담사, 의료진이 한 공간에서 협력하는 아동학대 대응 모델로, 2차 피해를 최소화할 수 있다는 점이 가장 큰 장점입니다. [3학년 심화 국어]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "J-1-QF",
+                        type: "followup",
+                        text: "27-1. 우리나라에 도입할 때 가장 큰 장애 요인은 무엇일까요?",
+                        keywords: "기관 간 협업, 정보 공유, 책임 조정, 통합 프로토콜",
+                        answer: "기관 간 협업 구조가 분리되어 있어 정보 공유와 책임 조정이 어렵다는 점입니다. 이를 해결하기 위해서는 통합 프로토콜이 필요합니다. [3학년 심화 국어]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "K-1",
+                title: "🌍 K. 국제 복지 비교",
+                questions: [
+                    {
+                        id: "K-1-Q",
+                        type: "main",
+                        text: "28. 미국의 SNAP 제도가 인상 깊었다고 했는데, 어떤 점이 특히 기억에 남았나요?",
+                        keywords: "소득 수준, 일정 기준, 포괄적 제도, 아동급식카드, 범위, 낙인감",
+                        answer: "소득 수준에 상관없이 일정 기준 이하 가구 전체를 포괄하는 제도라는 점이 인상 깊었습니다. 우리나라의 아동급식카드보다 범위가 넓고, 낙인감이 적습니다. [3학년 영어권 문화]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "K-1-QF",
+                        type: "followup",
+                        text: "28-1. SNAP 제도를 한국에 적용할 때 주의할 점은 무엇이라고 생각하나요?",
+                        keywords: "보편성 유지, 재정 부담, 부정 수급 방지, 세부 관리 기준",
+                        answer: "제도의 보편성은 유지하되, 재정 부담과 부정 수급 방지를 위한 세부 관리 기준이 필요하다고 생각합니다. [3학년 영어권 문화]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "K-2",
+                title: "🌍 K. 국제 복지 비교",
+                questions: [
+                    {
+                        id: "K-2-Q",
+                        type: "main",
+                        text: "29. 보편 복지와 선별 복지의 차이를 한 줄로 설명해 보세요.",
+                        keywords: "보편 복지, 선별 복지, 동일 제공, 차등 제공, 필요, 소득 수준",
+                        answer: "보편 복지는 모두에게 동일하게 제공되는 제도이고, 선별 복지는 필요와 소득 수준에 따라 차등 제공되는 제도입니다. [3학년 영어권 문화]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "L-1",
+                title: "🌍 L. 세계지리 ― 복지와 행복지수",
+                questions: [
+                    {
+                        id: "L-1-Q",
+                        type: "main",
+                        text: "30. 핀란드와 아프가니스탄을 비교한 이유는 무엇인가요?",
+                        keywords: "행복지수, 상하위 국가, 복지제도, 국민 삶의 질, 상관관계",
+                        answer: "행복지수 상·하위 국가의 차이를 분석하여 복지제도와 국민 삶의 질의 상관관계를 탐구하기 위함이었습니다. [2학년 세계지리]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "L-1-QF",
+                        type: "followup",
+                        text: "30-1. 북유럽 국가들이 행복지수 상위권에 속하는 공통 이유는 무엇이라 생각하나요?",
+                        keywords: "신뢰 사회, 투명한 정부, 보편적 복지 시스템, 공통 요인",
+                        answer: "높은 신뢰 사회, 투명한 정부, 보편적 복지 시스템이 공통 요인이라고 생각합니다. [2학년 세계지리]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "L-2",
+                title: "🌍 L. 세계지리 ― 복지와 행복지수",
+                questions: [
+                    {
+                        id: "L-2-Q",
+                        type: "main",
+                        text: "31. 핀란드가 높은 행복지수를 유지하는 이유는 무엇입니까?",
+                        keywords: "복지정책 안정성, 교육의 질, 정부 투명성, 핵심 요인",
+                        answer: "복지정책의 안정성과 교육의 질, 그리고 정부 투명성이 핵심 요인입니다. [2학년 세계지리]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "L-3",
+                title: "🌍 L. 세계지리 ― 복지와 행복지수",
+                questions: [
+                    {
+                        id: "L-3-Q",
+                        type: "main",
+                        text: "32. 사회복지사가 불평등 완화를 위해 해야 할 역할은 무엇이라고 생각하나요?",
+                        keywords: "제도 개선, 지역 간 격차 해소, 실천적 제안, 국제적 연대, 협력적 복지",
+                        answer: "제도 개선과 지역 간 격차 해소를 위한 실천적 제안이 필요하며, 국제적 연대를 통해 협력적 복지를 추구해야 한다고 봅니다. [2학년 세계지리]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "N-2",
+                title: "💛 N. 리더십·자율활동",
+                questions: [
+                    {
+                        id: "N-2-Q",
+                        type: "main",
+                        text: "33. 학급 규칙 개정에서 가장 어려웠던 점은 무엇이었나요?",
+                        keywords: "다양한 의견, 갈등, 회의, 경청, 절충안, 합의",
+                        answer: "다양한 의견이 엇갈리며 회의가 길어졌던 점입니다. 저는 서로의 입장을 듣고 절충안을 제시해 합의를 이끌었습니다. [2학년 자율활동]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "N-2-QF",
+                        type: "followup",
+                        text: "33-1. 그 경험이 리더십에 어떤 영향을 주었나요?",
+                        keywords: "리더십, 주도, 협력, 끌어내기",
+                        answer: "리더십은 주도하는 것이 아니라 협력을 끌어내는 것이라는 걸 깨달았습니다. [2학년 자율활동]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "O-2",
+                title: "💛 O. 아동학대·정서 발달",
+                questions: [
+                    {
+                        id: "O-2-Q",
+                        type: "main",
+                        text: "34. 아동 정서 발달에서 가장 중요한 요인은 무엇이라고 생각하나요?",
+                        keywords: "부모, 안정된 애착 관계, 핵심, 반응, 정서적 안전감",
+                        answer: "부모의 안정된 애착 관계가 핵심입니다. 아이는 부모의 반응을 통해 정서적 안전감을 형성하기 때문입니다. [2학년 동아리활동]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "O-2-QF",
+                        type: "followup",
+                        text: "34-1. 사회복지사가 개입할 때 가장 조심해야 할 점은 무엇인가요?",
+                        keywords: "부모, 아동, 신뢰 관계, 해치지 않기, 공감적 접근",
+                        answer: "부모와 아동 간 신뢰 관계를 해치지 않도록 공감적 접근이 필요합니다. [2학년 동아리활동]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "O-3",
+                title: "💛 O. 아동학대·정서 발달",
+                questions: [
+                    {
+                        id: "O-3-Q",
+                        type: "main",
+                        text: "35. 아동학대 사건을 조사하며 느낀 점은 무엇이었나요?",
+                        keywords: "학대, 단순 폭력, 사회적 방임, 결과, 예방 교육, 보호 체계",
+                        answer: "학대는 단순 폭력이 아니라 사회적 방임의 결과라는 점을 배웠습니다. 예방 교육과 보호 체계 강화가 필수입니다. [2학년 동아리활동]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "R-3",
+                title: "🌐 R. 영어·에세이",
+                questions: [
+                    {
+                        id: "R-3-Q",
+                        type: "main",
+                        text: "36. 감정의 사회화란 무엇이라고 생각하나요?",
+                        keywords: "양육자, 반응 관찰, 모방, 감정 학습, 과정",
+                        answer: "양육자의 반응을 관찰하고 모방하며 감정을 학습하는 과정입니다. [2학년 영어Ⅰ]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "T-1",
+                title: "🔬 T. 사회과제 연구",
+                questions: [
+                    {
+                        id: "T-1-Q",
+                        type: "main",
+                        text: "37. 노인 주간보호시설 조사를 하며 가장 어려웠던 점은 무엇이었나요?",
+                        keywords: "고령자, 설문 응답, 직접 읽어드리기, 진행",
+                        answer: "고령자 대상 설문 응답이 어려워 직접 읽어드리며 진행했습니다. [2학년 사회과제 연구]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "T-1-QF",
+                        type: "followup",
+                        text: "37-1. 이 연구에서 얻은 결론은 무엇이었나요?",
+                        keywords: "심리적 안정감, 신체적 효과, 제한적, 전문 운동관리사, 배치",
+                        answer: "심리적 안정감은 높았지만 신체적 효과는 제한적이었으며, 전문 운동관리사 배치가 필요하다는 결론을 얻었습니다. [2학년 사회과제 연구]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "V-3",
+                title: "🧩 V. 심리학 ― 공감과 상담기술",
+                questions: [
+                    {
+                        id: "V-3-Q",
+                        type: "main",
+                        text: "38. 상담에서 '페르소나' 뒤의 진짜 마음을 파악하려면 어떻게 해야 할까요?",
+                        keywords: "말, 행동, 표정, 시선, 비언어적 신호, 개방형 질문, 감정 표현",
+                        answer: "말보다 행동과 표정, 시선 등 비언어적 신호를 관찰해야 합니다. 개방형 질문을 통해 내담자가 스스로 감정을 표현하도록 돕는 것이 중요합니다. [3학년 심리학]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "W-2",
+                title: "💛 W. 리더십·자율활동",
+                questions: [
+                    {
+                        id: "W-2-Q",
+                        type: "main",
+                        text: "39. 부반장으로서 기억에 남는 도움 사례는 무엇인가요?",
+                        keywords: "친구, 신발 찢어짐, 슬리퍼, 빌려주기, 배려, 신뢰",
+                        answer: "친구의 신발이 찢어졌을 때 제 슬리퍼를 빌려준 일이 있습니다. 사소한 배려가 신뢰를 만든다는 걸 느꼈습니다. [1학년 자율활동]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "W-3",
+                title: "💛 W. 리더십·자율활동",
+                questions: [
+                    {
+                        id: "W-3-Q",
+                        type: "main",
+                        text: "40. 아동 봉사활동 중 어려웠던 점은 무엇이었나요?",
+                        keywords: "아이들, 거리감, 친근한 말투, 다가가기, 극복",
+                        answer: "처음엔 아이들과의 거리감이 컸지만, 친근한 말투로 다가가며 극복했습니다. [1학년 자율활동]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "Y-1-Q",
+                        type: "main",
+                        text: "41. 부모·자녀 갈등을 과학적으로만 설명하기 어려운 이유는 무엇인가요?",
+                        keywords: "전두엽 미성숙, 생물학적 요인, 신뢰, 가치관 차이, 심리, 문화 요인",
+                        answer: "전두엽 미성숙 같은 생물학적 요인 외에도 신뢰와 가치관 차이 같은 심리·문화 요인이 작용하기 때문입니다. [2학년 생명과학Ⅰ]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "BB-1",
+                title: "🎯 BB. 추가 면접 질문",
+                questions: [
+                    {
+                        id: "BB-1-Q4",
+                        type: "main",
+                        text: "42. 생활기록부에 봉사활동이 많은데, 가장 의미 있었던 경험을 말해 주세요.",
+                        keywords: "교육청 차원 봉사활동, 팀장, 마을 어르신, 반찬 배달, 환경정비, 기획, 홍보, 주도, 피드백, 필요한 존재",
+                        answer: "가장 기억에 남는 봉사는 교육청 차원 봉사활동입니다. 팀장으로서 마을 어르신 대상 반찬 배달과 환경정비를 진행했는데, 단순 활동이 아니라 기획부터 홍보까지 주도했습니다. 봉사 후 피드백을 통해 '학생들이 와줘서 행복했다'는 어르신의 말씀이 잊히지 않았습니다. '누군가에게 필요한 존재가 된다는 감정'이 저를 성장시켰습니다. [2학년 자율활동]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "BB-1-Q5",
+                        type: "main",
+                        text: "43. 사회복지사가 공감 능력과 객관성을 동시에 유지하려면 어떻게 해야 하나요?",
+                        keywords: "공감, 감정이입, 이해의 과정, 객관성, 공감적 거리두기, 라포 형성, 비언어적 신호, 관찰, 기록",
+                        answer: "공감은 감정이입이 아니라 이해의 과정이라고 생각합니다. 내담자의 이야기에 완전히 빠져들면 객관성을 잃을 수 있기 때문에, '공감적 거리두기'가 필요합니다. 심리학 수업에서 라포를 형성하되 비언어적 신호를 관찰하고 기록하며 감정에 휩쓸리지 않는 방법을 배웠습니다. 이런 태도가 사회복지사에게도 중요하다고 생각합니다. [3학년 심리학]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "BB-1-Q6",
+                        type: "main",
+                        text: "44. 최근 우리 사회에서 가장 시급한 복지 문제는 무엇이라고 생각하나요?",
+                        keywords: "고령자 돌봄 공백, 노인 주간시설, 정서적 안정감, 신체적 돌봄, 부족, 전문 인력 확충, 지역사회 연계",
+                        answer: "저는 고령자 돌봄 공백이 가장 시급하다고 생각합니다. 노인 주간시설을 조사하며, 정서적 안정감은 있었지만 신체적 돌봄은 부족하다는 점을 느꼈습니다. 이를 보완하기 위해 전문 인력 확충과 지역사회 연계 시스템이 필요합니다. [2학년 사회과제연구]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "BB-1-Q7",
+                        type: "main",
+                        text: "45. 고령화가 심화되는 사회에서 사회복지의 역할은 어떻게 변해야 할까요?",
+                        keywords: "도와주는 복지, 참여와 연대의 복지, 사회복지사, 지원자, 조력자, 세대 간 관계 회복, 통합적 복지, 어르신, 청소년, 세대 통합",
+                        answer: "과거 복지는 '도와주는 복지'였다면, 앞으로는 '참여와 연대의 복지'로 나아가야 한다고 생각합니다. 사회복지사는 단순 지원자가 아니라 지역사회의 조력자 역할을 해야 하며, 세대 간 관계 회복을 통한 통합적 복지가 중요합니다. 저는 봉사활동에서 어르신과 청소년을 연결하는 세대 통합 활동을 제안한 경험이 있습니다. [3학년 자율활동]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "BB-1-Q8",
+                        type: "main",
+                        text: "46. 아동학대나 노인학대 문제 해결을 위해 사회복지사가 할 수 있는 일은 무엇인가요?",
+                        keywords: "사후 개입, 예방 단계, 아동 방임, 부모 스트레스, 사회적 고립, 예비부모 교육, 상담 연계, 정례화, 학대 예방",
+                        answer: "사회복지사는 사후 개입뿐 아니라 예방 단계에서 역할을 해야 합니다. 저는 융합수업에서 아동 방임의 원인을 부모 스트레스와 사회적 고립으로 분석했습니다. 예비부모 교육과 상담 연계 프로그램을 정례화해, 학대를 미리 막는 시스템을 구축해야 한다고 생각합니다. [3학년 융합수업]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "BB-1-Q9",
+                        type: "main",
+                        text: "47. 협동이 필요한 상황에서 갈등을 해결했던 경험이 있나요?",
+                        keywords: "봉사 프로젝트, 팀원, 의견 충돌, 다수결, 의견 정리, 공유, 절충안, 리더십, 듣는 힘",
+                        answer: "봉사 프로젝트 중 팀원 간 의견이 충돌했을 때, 다수결로 결정하지 않고 각자 의견을 정리해 공유하는 시간을 가졌습니다. 서로의 입장을 듣고 절충안을 마련하면서 프로젝트가 더 발전된 방향으로 진행됐습니다. 이 경험을 통해 '리더십은 말하는 힘보다 듣는 힘에서 나온다'는 걸 배웠습니다. [2학년 자율활동]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "BB-1-Q10",
+                        type: "main",
+                        text: "48. 팀워크를 발휘했던 구체적인 사례를 이야기해 주세요.",
+                        keywords: "UCC 영어 프로젝트, 팀원, 참여도 차이, 영어 약함, 발음, 대사, 연습, 참여 유도, 완성도, 협력, 책임감",
+                        answer: "UCC 영어 프로젝트에서 팀원 간 참여도 차이가 커서 어려움이 있었습니다. 저는 영어가 약한 친구에게 발음과 대사를 같이 연습하며 참여를 유도했습니다. 그 결과 완성도 높은 영상물을 제출할 수 있었고, 협력의 가치와 책임감을 동시에 배웠습니다. [2학년 영어Ⅰ]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "BB-1-Q11",
+                        type: "main",
+                        text: "49. 본인이 생각하는 '좋은 사회복지사'의 기준은 무엇인가요?",
+                        keywords: "공감력, 실천력, 균형, 감정적 힘든 상황, 문제 분석, 대안 제시, 복지의 시작, 위로, 해결책, 동반자",
+                        answer: "저는 공감력과 실천력의 균형을 가진 사람이 좋은 사회복지사라고 생각합니다. 봉사 현장에서 감정적으로 힘든 상황을 경험했지만, 문제를 분석하고 대안을 제시하는 과정이 진짜 복지의 시작임을 느꼈습니다. 단순히 위로하는 사람이 아닌, 함께 해결책을 찾는 동반자가 되고 싶습니다. [2학년 자율활동, 3학년 사회문화]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "BB-1-Q12",
+                        type: "main",
+                        text: "50. 복지 예산이 한정되어 있을 때, 어떤 집단을 우선 지원해야 한다고 생각하나요?",
+                        keywords: "돌봄 사각지대, 아동, 고령층, 사회적 약자, 목소리, 사회복지, 약자 중심, 기회 평등, 사회 전체 복지",
+                        answer: "저는 돌봄 사각지대에 놓인 아동과 고령층이 우선되어야 한다고 생각합니다. 사회적 약자는 스스로 목소리를 내기 어렵기 때문입니다. 사회복지는 약자 중심의 접근이 기본이며, 기회 평등이 실현될 때 사회 전체의 복지 수준이 높아집니다. [3학년 사회문화, 2학년 사회과제연구]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "BB-1-Q13",
+                        type: "main",
+                        text: "51. 사회복지사의 역할이 '시혜'가 아니라 '권리 보장'이라는 말의 의미를 설명해 주세요.",
+                        keywords: "시혜, 도와주는 사람, 받는 사람, 복지, 인간 권리, 회복, 낙인효과, 복지 수급자, 국가 도움받는 존재, 권리 행사, 시민",
+                        answer: "시혜는 '도와주는 사람과 받는 사람'의 관계를 전제로 하지만, 복지는 인간으로서의 권리를 회복하는 과정입니다. 저는 낙인효과 탐구를 통해 복지 수급자를 '국가 도움받는 존재'가 아닌 '자신의 권리를 행사하는 시민'으로 인식하는 전환이 필요하다고 느꼈습니다. [2학년 동아리활동]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "BB-1-Q14",
+                        type: "main",
+                        text: "52. 어려운 상황에서도 도덕적 판단을 내려야 했던 경험이 있나요?",
+                        keywords: "봉사, 식사 배달, 순서, 팀원, 다툼, 도움받는 분, 입장, 배려, 결정, 팀 단합, 윤리적 판단, 이익, 옳음",
+                        answer: "봉사 중 식사 배달 순서를 놓고 팀원 간 다툼이 있었는데, 저는 '도움을 받는 분의 입장에서 생각하자'라고 제안했습니다. 상대를 배려하는 결정이 결국 팀 전체를 단합시켰습니다. 이후 저는 윤리적 판단이란 '이익이 아닌 옳음을 선택하는 것'이라는 걸 깨달았습니다. [2학년 자율활동]",
+                        userAnswer: ""
+                    }
+                ]
+            },
+            {
+                id: "K-3",
+                title: "🔹 K. 심화 추가 질문 (전공 심화)",
+                questions: [
+                    {
+                        id: "K-3-Q1",
+                        type: "main",
+                        text: "53. '좋은 복지'란 무엇이라고 생각하나요?",
+                        keywords: "사람의 존엄, 회복, 지원, 삶의 회복, 복지의 본질",
+                        answer: "저는 좋은 복지를 '사람의 존엄을 회복시키는 복지'라고 생각합니다. 단순한 지원이 아닌, 스스로 삶을 회복할 수 있도록 돕는 것이 복지의 본질입니다. [3학년 사회문화]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "K-3-Q2",
+                        type: "main",
+                        text: "54. 복지정책에 AI 기술을 활용할 때 주의해야 할 점은 무엇일까요?",
+                        keywords: "데이터 기반, 효율성, 인간의 감정, 맥락, AI 도구, 공감, 윤리적 판단",
+                        answer: "데이터 기반의 효율성은 높아지지만, 인간의 감정과 맥락을 잃을 위험이 있습니다. AI는 도구일 뿐, 최종 판단은 사람의 공감과 윤리적 판단이 담당해야 합니다. [3학년 사회문화/심리학]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "K-3-Q3",
+                        type: "main",
+                        text: "55. 사회복지사에게 가장 중요한 윤리적 태도는 무엇이라고 생각하나요?",
+                        keywords: "공감, 비밀보장, 판단하지 않는 태도, 내담자, 약점, 안전한 공간",
+                        answer: "공감, 비밀보장, 판단하지 않는 태도입니다. 내담자가 자신의 약점을 드러내는 순간에도 복지사는 '안전한 공간'이 되어야 합니다. [3학년 심리학]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "K-3-Q4",
+                        type: "main",
+                        text: "56. 청소년 복지와 노인 복지 중 어떤 영역을 더 중시하나요?",
+                        keywords: "한 세대, 우선, 세대 간 연대, 청소년, 건강, 노인 복지, 유지",
+                        answer: "한 세대를 우선하기보다, 세대 간 연대를 만드는 복지가 중요합니다. 청소년이 건강히 자라야 노인의 복지도 유지됩니다. [3학년 사회문화]",
+                        userAnswer: ""
+                    },
+                    {
+                        id: "K-3-Q5",
+                        type: "main",
+                        text: "57. 학생으로서 지역사회 복지 활성화를 위해 할 수 있는 일은 무엇인가요?",
+                        keywords: "지역 어르신, 안부 전화, 청소년 봉사, 연계 캠페인, 학교, 지역 복지, 중심",
+                        answer: "지역 어르신과의 안부 전화, 청소년 봉사 연계 캠페인 등을 통해 학교가 지역 복지의 중심이 되는 구조를 만들고 싶습니다. [3학년 자율활동]",
+                        userAnswer: ""
                     }
                 ]
             }
         ];
 
-        // 전역 변수
-        let currentMode = 'sequential';
-        let currentIndex = 0;
-        let currentQuestionSet = [];
-        let bookmarkedQuestions = new Set();
-        let timerInterval = null;
-        let timeElapsed = 0;
-        let isPaused = false;
+        // 즉시 실행 함수로 모든 코드를 감싸기
+        (function() {
+            // 전역 변수 정의
+            let currentMode = "sequential";
+            let currentSetIndex = 0;
+            let currentQuestionIndex = 0;
+            let flatOrder = [];
+            let currentFlatIndex = 0;
+            let setOrder = Array.from({ length: questionSets.length }, (_, i) => i);
+            let bookmarkedQuestions = [];
+            let timerInterval;
+            let seconds = 0;
 
-        // DOM 요소들
-        const timerElement = document.getElementById('timer');
-        const startBtn = document.getElementById('startBtn');
-        const pauseBtn = document.getElementById('pauseBtn');
-        const resetBtn = document.getElementById('resetBtn');
-        const modeButtons = document.querySelectorAll('.mode-btn');
-        const questionNumberElement = document.getElementById('questionNumber');
-        const questionTextElement = document.getElementById('questionText');
-        const keywordListElement = document.getElementById('keywordList');
-        const answerTextElement = document.getElementById('answerText');
-        const keywordsContentElement = document.getElementById('keywordsContent');
-        const answerContentElement = document.getElementById('answerContent');
-        const revealKeywordsBtn = document.getElementById('revealKeywordsBtn');
-        const revealAnswerBtn = document.getElementById('revealAnswerBtn');
-        const bookmarkBtn = document.getElementById('bookmarkBtn');
-        const currentQuestionElement = document.getElementById('currentQuestion');
-        const totalQuestionsElement = document.getElementById('totalQuestions');
-        const bookmarkCountElement = document.getElementById('bookmarkCount');
-        const progressTextElement = document.getElementById('progressText');
-        const progressFillElement = document.getElementById('progressFill');
-        const firstBtn = document.getElementById('firstBtn');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
+            // DOM 요소 참조
+            const tabs = document.querySelectorAll('.tab');
+            const questionElement = document.querySelector('.question');
+            const keywordsContent = document.querySelector('.keywords-content');
+            const exampleAnswerContent = document.querySelector('.example-answer-content');
+            const keywordsSection = document.querySelector('.keywords-section');
+            const exampleAnswerSection = document.querySelector('.example-answer-section');
+            const keywordsTab = document.querySelector('.keywords-tab');
+            const exampleTab = document.querySelector('.example-tab');
+            const bookmarkButton = document.querySelector('.bookmark-button');
+            const homeButton = document.getElementById('home');
+            const prevButton = document.getElementById('prev');
+            const nextButton = document.getElementById('next');
+            const timerElement = document.querySelector('.timer');
+            const startTimerButton = document.getElementById('start-timer');
+            const pauseTimerButton = document.getElementById('pause-timer');
+            const resetTimerButton = document.getElementById('reset-timer');
 
-        // 문제 세트 생성 함수
-        function createQuestionSet() {
-            const questionSet = [];
+        // 이벤트 리스너 등록
+        tabs.forEach(tab => {
+            const handleTabClick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                setMode(tab.dataset.mode);
+            };
             
-            questions.forEach(question => {
-                // 메인 문제 추가
-                questionSet.push({
-                    ...question,
-                    isMain: true,
-                    displayId: question.id
-                });
-                
-                // 서브 문제들 추가
-                if (question.subQuestions) {
-                    question.subQuestions.forEach(subQuestion => {
-                        questionSet.push({
-                            ...subQuestion,
-                            isMain: false,
-                            parentId: question.id,
-                            displayId: subQuestion.id
-                        });
-                    });
+            tab.addEventListener('click', handleTabClick);
+            tab.addEventListener('touchend', handleTabClick);
+        });
+
+        // 터치 이벤트를 위한 공통 핸들러 함수
+        const addTouchEvents = (element, handler) => {
+            if (!element) return;
+            const touchHandler = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                handler();
+            };
+            
+            element.addEventListener('click', handler);
+            element.addEventListener('touchend', touchHandler);
+        };
+
+        addTouchEvents(homeButton, () => {
+            if (currentMode === "sequential" || currentMode === "reverse") {
+                currentFlatIndex = 0;
+            } else {
+                currentSetIndex = 0;
+                currentQuestionIndex = 0;
+            }
+            displayCurrentQuestion();
+        });
+
+        addTouchEvents(prevButton, () => {
+            if (currentMode === "bookmark") {
+                currentSetIndex = (currentSetIndex - 1 + bookmarkedQuestions.length) % bookmarkedQuestions.length;
+            } else if (currentMode === "sequential" || currentMode === "reverse") {
+                // 번호순/역순 모두 flatOrder 기준으로 이동
+                if (!flatOrder || flatOrder.length === 0) {
+                    flatOrder = buildFlatOrder();
+                    flatOrder.sort((a, b) => a.sortKey - b.sortKey);
+                    if (currentMode === "reverse") flatOrder.reverse();
                 }
-            });
-            
-            return questionSet;
-        }
+                currentFlatIndex = (currentFlatIndex - 1 + flatOrder.length) % flatOrder.length;
+            } else if (currentMode === "reverse") {
+                // 역순 모드: 1→2→3...→57 순서로 되돌아가기
+                const currentSet = questionSets[setOrder[currentSetIndex]];
+                if (currentQuestionIndex < currentSet.questions.length - 1) {
+                    currentQuestionIndex++;
+                } else {
+                    // 역순 배열에서 이전(큰 번호) 세트로 이동
+                    currentSetIndex = (currentSetIndex - 1 + setOrder.length) % setOrder.length;
+                    currentQuestionIndex = 0; // 해당 세트의 첫 문제로 이동(번호가 더 큼)
+                }
+            } else {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                } else {
+                    currentSetIndex = (currentSetIndex - 1 + setOrder.length) % setOrder.length;
+                    currentQuestionIndex = questionSets[setOrder[currentSetIndex]].questions.length - 1;
+                }
+            }
+            displayCurrentQuestion();
+        });
 
-        // 문제 순서 설정 함수
-        function setQuestionOrder() {
-            const allQuestions = createQuestionSet();
+        addTouchEvents(nextButton, () => {
+            if (currentMode === "bookmark") {
+                currentSetIndex = (currentSetIndex + 1) % bookmarkedQuestions.length;
+            } else if (currentMode === "sequential" || currentMode === "reverse") {
+                // 번호순/역순 모두 flatOrder 기준으로 이동
+                if (!flatOrder || flatOrder.length === 0) {
+                    flatOrder = buildFlatOrder();
+                    flatOrder.sort((a, b) => a.sortKey - b.sortKey);
+                    if (currentMode === "reverse") flatOrder.reverse();
+                }
+                currentFlatIndex = (currentFlatIndex + 1) % flatOrder.length;
+            } else if (currentMode === "reverse") {
+                // 역순 모드: 57→56→55...→1 순서로 진행
+                const currentSet = questionSets[setOrder[currentSetIndex]];
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                } else {
+                    // 역순 배열에서 다음(작은 번호) 세트로 이동
+                    currentSetIndex = (currentSetIndex + 1) % setOrder.length;
+                    currentQuestionIndex = questionSets[setOrder[currentSetIndex]].questions.length - 1; // 해당 세트의 마지막 문제로 이동(번호가 더 작음)
+                }
+            } else {
+                const currentSet = questionSets[setOrder[currentSetIndex]];
+                if (currentQuestionIndex < currentSet.questions.length - 1) {
+                    currentQuestionIndex++;
+                } else {
+                    currentSetIndex = (currentSetIndex + 1) % setOrder.length;
+                    currentQuestionIndex = 0;
+                }
+            }
+            displayCurrentQuestion();
+        });
+
+        addTouchEvents(bookmarkButton, toggleBookmark);
+
+        const handleKeywordsTab = () => {
+            keywordsSection.classList.toggle('hidden');
+            exampleAnswerSection.classList.add('hidden');
             
-            switch (currentMode) {
-                case 'sequential':
-                    currentQuestionSet = allQuestions;
-                    break;
-                case 'reverse':
-                    // 역순으로 정렬하되 세트는 유지
-                    const reversed = [];
-                    for (let i = questions.length - 1; i >= 0; i--) {
-                        const question = questions[i];
-                        // 메인 문제와 서브 문제들을 함께 추가
-                        reversed.push({
-                            ...question,
-                            isMain: true,
-                            displayId: question.id
-                        });
-                        if (question.subQuestions) {
-                            question.subQuestions.forEach(subQuestion => {
-                                reversed.push({
-                                    ...subQuestion,
-                                    isMain: false,
-                                    parentId: question.id,
-                                    displayId: subQuestion.id
-                                });
-                            });
-                        }
-                    }
-                    currentQuestionSet = reversed;
-                    break;
-                case 'random':
-                    // 랜덤으로 섞되 세트는 유지
-                    const shuffled = [];
-                    const questionGroups = [];
-                    
-                    questions.forEach(question => {
-                        const group = [{
-                            ...question,
-                            isMain: true,
-                            displayId: question.id
-                        }];
-                        
-                        if (question.subQuestions) {
-                            question.subQuestions.forEach(subQuestion => {
-                                group.push({
-                                    ...subQuestion,
-                                    isMain: false,
-                                    parentId: question.id,
-                                    displayId: subQuestion.id
-                                });
-                            });
-                        }
-                        
-                        questionGroups.push(group);
-                    });
-                    
-                    // 그룹들을 랜덤하게 섞기
-                    for (let i = questionGroups.length - 1; i > 0; i--) {
-                        const j = Math.floor(Math.random() * (i + 1));
-                        [questionGroups[i], questionGroups[j]] = [questionGroups[j], questionGroups[i]];
-                    }
-                    
-                    // 섞인 그룹들을 순서대로 추가
-                    questionGroups.forEach(group => {
-                        shuffled.push(...group);
-                    });
-                    
-                    currentQuestionSet = shuffled;
-                    break;
-                case 'bookmark':
-                    currentQuestionSet = allQuestions.filter(q => bookmarkedQuestions.has(q.displayId));
-                    break;
+            if (!keywordsSection.classList.contains('hidden')) {
+                keywordsTab.style.transform = 'scale(1.05)';
+                keywordsTab.style.boxShadow = '0 15px 30px rgba(30, 87, 153, 0.4)';
+            } else {
+                keywordsTab.style.transform = 'scale(1)';
+                keywordsTab.style.boxShadow = '0 10px 20px rgba(30, 87, 153, 0.3)';
             }
             
-            currentIndex = 0;
-            updateDisplay();
-        }
+            exampleTab.style.transform = 'scale(1)';
+            exampleTab.style.boxShadow = '0 10px 20px rgba(30, 87, 153, 0.3)';
+        };
 
-        // 타이머 함수들
-        function startTimer() {
-            if (timerInterval) return;
+        const handleExampleTab = () => {
+            exampleAnswerSection.classList.toggle('hidden');
+            keywordsSection.classList.add('hidden');
             
-            timerInterval = setInterval(() => {
-                if (!isPaused) {
-                    timeElapsed++;
-                    updateTimerDisplay();
-                }
-            }, 1000);
-        }
+            if (!exampleAnswerSection.classList.contains('hidden')) {
+                exampleTab.style.transform = 'scale(1.05)';
+                exampleTab.style.boxShadow = '0 15px 30px rgba(30, 87, 153, 0.4)';
+            } else {
+                exampleTab.style.transform = 'scale(1)';
+                exampleTab.style.boxShadow = '0 10px 20px rgba(30, 87, 153, 0.3)';
+            }
+            
+            keywordsTab.style.transform = 'scale(1)';
+            keywordsTab.style.boxShadow = '0 10px 20px rgba(30, 87, 153, 0.3)';
+        };
 
-        function pauseTimer() {
-            isPaused = !isPaused;
-        }
+        addTouchEvents(keywordsTab, handleKeywordsTab);
+        addTouchEvents(exampleTab, handleExampleTab);
 
-        function resetTimer() {
-            clearInterval(timerInterval);
-            timerInterval = null;
-            timeElapsed = 0;
-            isPaused = false;
-            updateTimerDisplay();
-        }
+        // 타이머 관련 이벤트 리스너
+        addTouchEvents(startTimerButton, startTimer);
+        addTouchEvents(pauseTimerButton, pauseTimer);
+        addTouchEvents(resetTimerButton, resetTimer);
 
-        function updateTimerDisplay() {
-            const minutes = Math.floor(timeElapsed / 60);
-            const seconds = timeElapsed % 60;
-            timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        }
-
-        // 화면 업데이트 함수
-        function updateDisplay() {
-            if (currentQuestionSet.length === 0) {
-                questionTextElement.textContent = "북마크된 문제가 없습니다.";
+        // 모드 설정 함수
+        function setMode(mode) {
+            currentMode = mode;
+            
+            // questionSets가 없는 경우 처리
+            if (!questionSets || questionSets.length === 0) {
+                console.error("questionSets가 정의되지 않았습니다.");
                 return;
             }
             
-            const currentQuestion = currentQuestionSet[currentIndex];
+            switch (mode) {
+                case "sequential":
+                    setOrder = Array.from({ length: questionSets.length }, (_, i) => i);
+                    // 번호 기반 flatOrder 사용 준비
+                    flatOrder = buildFlatOrder();
+                    flatOrder.sort((a, b) => a.sortKey - b.sortKey);
+                    currentFlatIndex = 0;
+                    break;
+                case "reverse":
+                    // 역순 모드: 번호 기준 내림차순
+                    setOrder = Array.from({ length: questionSets.length }, (_, i) => questionSets.length - 1 - i);
+                    flatOrder = buildFlatOrder();
+                    flatOrder.sort((a, b) => b.sortKey - a.sortKey);
+                    currentFlatIndex = 0;
+                    break;
+                case "random":
+                    setOrder = Array.from({ length: questionSets.length }, (_, i) => i);
+                    shuffleArray(setOrder);
+                    break;
+                case "bookmark":
+                    if (bookmarkedQuestions.length === 0) {
+                        alert("북마크한 문제가 없습니다.");
+                        tabs[0].click(); // 번호순 모드로 전환
+                        return;
+                    }
+                    break;
+            }
+
+            // 현재 세트와 문제 인덱스 초기화
+            if (mode === "sequential" || mode === "reverse") {
+                currentFlatIndex = 0;
+            } else {
+                currentSetIndex = 0;
+                currentQuestionIndex = 0;
+            }
+            displayCurrentQuestion();
+        }
+
+        // 현재 문제 표시 함수
+        function displayCurrentQuestion() {
+            let currentSet, currentQuestion;
+
+            // questionSets가 비어있거나 setOrder가 비어있는 경우 처리
+            if (!questionSets || questionSets.length === 0) {
+                questionElement.textContent = "문제가 준비되지 않았습니다. 문제를 추가해주세요.";
+                return;
+            }
+
+            if (currentMode === "bookmark" && bookmarkedQuestions.length > 0) {
+                // 북마크 모드일 경우
+                const bookmark = bookmarkedQuestions[currentSetIndex];
+                currentSet = questionSets.find(set => set.id === bookmark.setId);
+                currentQuestion = currentSet ? currentSet.questions.find(q => q.id === bookmark.questionId) : null;
+            } else if (currentMode === "sequential" || currentMode === "reverse") {
+                // 번호 기반 flatOrder 사용
+                if (!flatOrder || flatOrder.length === 0) {
+                    flatOrder = buildFlatOrder();
+                    flatOrder.sort((a, b) => a.sortKey - b.sortKey);
+                    if (currentMode === "reverse") flatOrder.reverse();
+                    currentFlatIndex = 0;
+                }
+                const entry = flatOrder[currentFlatIndex];
+                currentSet = questionSets[entry.setIndex];
+                currentQuestion = currentSet.questions[entry.questionIndex];
+            } else {
+                // 일반 모드일 경우
+                if (!setOrder || setOrder.length === 0) {
+                    setOrder = Array.from({ length: questionSets.length }, (_, i) => i);
+                }
+                currentSet = questionSets[setOrder[currentSetIndex]];
+                currentQuestion = currentSet ? currentSet.questions[currentQuestionIndex] : null;
+            }
+
+            // 문제를 찾지 못한 경우 처리
+            if (!currentSet || !currentQuestion) {
+                questionElement.textContent = "문제를 찾을 수 없습니다.";
+                return;
+            }
+
+            // 세트 제목 표시
+            const setTitleElement = document.querySelector('.set-title');
+            setTitleElement.textContent = currentSet.title;
             
-            questionNumberElement.textContent = `문제 ${currentIndex + 1} / ${currentQuestionSet.length}`;
-            
-            // 문제 번호 추가
+            // 문제 번호 추출 또는 생성
             let questionNumber = '';
-            if (currentQuestion.isMain) {
-                questionNumber = `${currentQuestion.displayId}. `;
+            let questionContent = currentQuestion.text;
+            
+            // 문제 번호가 이미 있는지 확인 (1., 1-1. 등)
+            const questionNumberMatch = currentQuestion.text.match(/^(\d+\.|\d+-\d+\.)\s?/);
+            if (questionNumberMatch) {
+                questionNumber = questionNumberMatch[1];
+                questionContent = currentQuestion.text.substring(questionNumberMatch[0].length);
             } else {
-                questionNumber = `${currentQuestion.displayId}. `;
+                // 문제 ID에서 번호 추출 (예: C-1-QFC에서 13 추출)
+                const idMatch = currentQuestion.id.match(/^([A-Z])-(\d+)/);
+                if (idMatch) {
+                    const setLetter = idMatch[1];
+                    const setNumber = parseInt(idMatch[2]);
+                    
+                    // 문제 타입에 따라 번호 생성
+                    if (currentQuestion.type === "main") {
+                        questionNumber = `${10 * (setLetter.charCodeAt(0) - 'A'.charCodeAt(0)) + setNumber}.`;
+                    } else if (currentQuestion.type === "followup") {
+                        questionNumber = `${10 * (setLetter.charCodeAt(0) - 'A'.charCodeAt(0)) + setNumber}-1.`;
+                    } else if (currentQuestion.type === "concept") {
+                        // 개념 질문은 주요 질문 번호에 -2 추가
+                        questionNumber = `${10 * (setLetter.charCodeAt(0) - 'A'.charCodeAt(0)) + setNumber}-2.`;
+                    } else if (currentQuestion.type === "apply") {
+                        // 적용 질문은 주요 질문 번호에 -3 추가
+                        questionNumber = `${10 * (setLetter.charCodeAt(0) - 'A'.charCodeAt(0)) + setNumber}-3.`;
+                    }
+                }
             }
             
-            questionTextElement.textContent = questionNumber + currentQuestion.question;
+            // 문제 정보 표시
+            questionElement.textContent = `${questionNumber} ${questionContent}`;
+            keywordsContent.textContent = currentQuestion.keywords;
+            exampleAnswerContent.textContent = currentQuestion.answer;
+
+            // 북마크 상태 표시
+            const isBookmarked = bookmarkedQuestions.some(
+                bookmark => bookmark.setId === currentSet.id && bookmark.questionId === currentQuestion.id
+            );
             
-            // 키워드 표시
-            keywordListElement.innerHTML = '';
-            currentQuestion.keywords.forEach(keyword => {
-                const keywordElement = document.createElement('span');
-                keywordElement.className = 'keyword';
-                keywordElement.textContent = keyword;
-                keywordListElement.appendChild(keywordElement);
-            });
-            
-            // 답변 표시
-            answerTextElement.textContent = currentQuestion.answer;
-            
-            // 북마크 상태 업데이트
-            updateBookmarkButton();
-            
-            // 통계 업데이트
-            currentQuestionElement.textContent = currentIndex + 1;
-            totalQuestionsElement.textContent = currentQuestionSet.length;
-            bookmarkCountElement.textContent = bookmarkedQuestions.size;
-            
-            // 진행률 업데이트
-            const progress = ((currentIndex + 1) / currentQuestionSet.length) * 100;
-            progressTextElement.textContent = Math.round(progress) + '%';
-            progressFillElement.style.width = progress + '%';
-            
-            // 네비게이션 버튼 상태 업데이트
-            firstBtn.disabled = currentIndex === 0;
-            prevBtn.disabled = currentIndex === 0;
-            nextBtn.disabled = currentIndex === currentQuestionSet.length - 1;
-            
-            // 답변 숨기기
-            keywordsContentElement.classList.remove('show');
-            answerContentElement.classList.remove('show');
+            if (isBookmarked) {
+                bookmarkButton.classList.add('active');
+            } else {
+                bookmarkButton.classList.remove('active');
+            }
+
+            // 답변 섹션 숨기기
+            keywordsSection.classList.add('hidden');
+            exampleAnswerSection.classList.add('hidden');
         }
 
-        // 북마크 함수들
+        // 번호 정렬용 flatOrder 구축
+        function buildFlatOrder() {
+            const result = [];
+            for (let si = 0; si < questionSets.length; si++) {
+                const set = questionSets[si];
+                for (let qi = 0; qi < set.questions.length; qi++) {
+                    const q = set.questions[qi];
+                    const sortKey = getQuestionSortKey(q);
+                    result.push({ setIndex: si, questionIndex: qi, sortKey });
+                }
+            }
+            return result;
+        }
+
+        // 질문 텍스트에서 번호를 추출해 정렬 키 생성
+        function getQuestionSortKey(question) {
+            // 우선 텍스트에서 '42.' 또는 '42-1.' 형태 파싱(공백 허용)
+            const m = question.text.match(/^(\d+)(?:-(\d+))?\.\s?/);
+            if (m) {
+                const main = parseInt(m[1], 10);
+                const sub = m[2] ? parseInt(m[2], 10) : 0;
+                return main + sub / 10;
+            }
+            // 텍스트에 번호가 없으면 기존 ID 기반 규칙을 사용
+            const idMatch = question.id.match(/^([A-Z])-(\d+)/);
+            if (idMatch) {
+                const setLetter = idMatch[1];
+                const setNumber = parseInt(idMatch[2], 10);
+                const base = 10 * (setLetter.charCodeAt(0) - 'A'.charCodeAt(0)) + setNumber;
+                if (question.type === "followup") return base + 0.1;
+                if (question.type === "concept") return base + 0.2;
+                if (question.type === "apply") return base + 0.3;
+                return base;
+            }
+            // 마지막 fallback: 매우 큰 값으로 뒤로 밀기
+            return Number.MAX_SAFE_INTEGER;
+        }
+
+        // 북마크 토글 함수
         function toggleBookmark() {
-            const currentQuestion = currentQuestionSet[currentIndex];
-            if (bookmarkedQuestions.has(currentQuestion.displayId)) {
-                bookmarkedQuestions.delete(currentQuestion.displayId);
+            let currentSet, currentQuestion;
+            if (currentMode === "bookmark" && bookmarkedQuestions.length > 0) {
+                const bookmark = bookmarkedQuestions[currentSetIndex];
+                currentSet = questionSets.find(set => set.id === bookmark.setId);
+                currentQuestion = currentSet.questions.find(q => q.id === bookmark.questionId);
             } else {
-                bookmarkedQuestions.add(currentQuestion.displayId);
+                currentSet = questionSets[setOrder[currentSetIndex]];
+                currentQuestion = currentSet.questions[currentQuestionIndex];
             }
-            updateBookmarkButton();
-            bookmarkCountElement.textContent = bookmarkedQuestions.size;
-        }
-
-        function updateBookmarkButton() {
-            const currentQuestion = currentQuestionSet[currentIndex];
-            if (bookmarkedQuestions.has(currentQuestion.displayId)) {
-                bookmarkBtn.classList.add('bookmarked');
-                bookmarkBtn.textContent = '★';
-            } else {
-                bookmarkBtn.classList.remove('bookmarked');
-                bookmarkBtn.textContent = '☆';
-            }
-        }
-
-        // 네비게이션 함수들
-        function goToFirst() {
-            currentIndex = 0;
-            updateDisplay();
-        }
-
-        function goToPrevious() {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateDisplay();
-            }
-        }
-
-        function goToNext() {
-            if (currentIndex < currentQuestionSet.length - 1) {
-                currentIndex++;
-                updateDisplay();
-            }
-        }
-
-        // 이벤트 리스너들
-        startBtn.addEventListener('click', () => {
-            startTimer();
-            startBtn.disabled = true;
-            pauseBtn.disabled = false;
-        });
-
-        pauseBtn.addEventListener('click', () => {
-            pauseTimer();
-            pauseBtn.textContent = isPaused ? '재개' : '일시정지';
-        });
-
-        resetBtn.addEventListener('click', () => {
-            resetTimer();
-            startBtn.disabled = false;
-            pauseBtn.disabled = true;
-            pauseBtn.textContent = '일시정지';
-        });
-
-        modeButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                modeButtons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentMode = btn.dataset.mode;
-                setQuestionOrder();
-            });
-        });
-
-        revealKeywordsBtn.addEventListener('click', () => {
-            keywordsContentElement.classList.toggle('show');
-        });
-
-        revealAnswerBtn.addEventListener('click', () => {
-            answerContentElement.classList.toggle('show');
-        });
-
-        // 북마크 버튼 이벤트 (모바일 최적화)
-        bookmarkBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            toggleBookmark();
-        });
-
-        // 터치 이벤트 추가 (모바일에서 더 안정적)
-        bookmarkBtn.addEventListener('touchstart', (e) => {
-            e.preventDefault();
-        });
-
-        bookmarkBtn.addEventListener('touchend', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            toggleBookmark();
-        });
-
-        firstBtn.addEventListener('click', goToFirst);
-        prevBtn.addEventListener('click', goToPrevious);
-        nextBtn.addEventListener('click', goToNext);
-
-        // 키보드 단축키
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') goToPrevious();
-            if (e.key === 'ArrowRight') goToNext();
-            if (e.key === 'Home') goToFirst();
-            if (e.key === ' ') {
-                e.preventDefault();
-                if (isPaused) {
-                    pauseTimer();
-                    pauseBtn.textContent = '일시정지';
-                } else {
-                    pauseTimer();
-                    pauseBtn.textContent = '재개';
-                }
-            }
-        });
-
-        // 모바일 스와이프 제스처 지원
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        document.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-
-        document.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        });
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
             
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    // 왼쪽으로 스와이프 - 다음 문제
-                    goToNext();
-                } else {
-                    // 오른쪽으로 스와이프 - 이전 문제
-                    goToPrevious();
+            const bookmarkIndex = bookmarkedQuestions.findIndex(
+                bookmark => bookmark.setId === currentSet.id && bookmark.questionId === currentQuestion.id
+            );
+            
+            if (bookmarkIndex === -1) {
+                // 북마크 추가
+                bookmarkedQuestions.push({
+                    setId: currentSet.id,
+                    questionId: currentQuestion.id
+                });
+                bookmarkButton.classList.add('active');
+            } else {
+                // 북마크 제거
+                bookmarkedQuestions.splice(bookmarkIndex, 1);
+                bookmarkButton.classList.remove('active');
+                
+                // 북마크 모드에서 북마크를 제거하는 경우
+                if (currentMode === "bookmark") {
+                    if (bookmarkedQuestions.length === 0) {
+                        alert("북마크한 문제가 없습니다. 번호순 모드로 전환합니다.");
+                        setMode("sequential");
+                        return;
+                    }
+                    
+                    // 현재 인덱스 조정
+                    if (currentSetIndex >= bookmarkedQuestions.length) {
+                        currentSetIndex = bookmarkedQuestions.length - 1;
+                    }
+                    displayCurrentQuestion();
                 }
             }
         }
 
-        // 초기화
-        setQuestionOrder();
+        // 배열을 무작위로 섞는 함수 (Fisher-Yates 알고리즘)
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // 타이머 시작 함수
+        function startTimer() {
+            if (!timerInterval) {
+                timerInterval = setInterval(() => {
+                    seconds++;
+                    updateTimerDisplay();
+                }, 1000);
+            }
+        }
+
+        // 타이머 일시정지 함수
+        function pauseTimer() {
+            clearInterval(timerInterval);
+            timerInterval = null;
+        }
+
+        // 타이머 초기화 함수
+        function resetTimer() {
+            pauseTimer();
+            seconds = 0;
+            updateTimerDisplay();
+        }
+
+        // 타이머 표시 업데이트 함수
+        function updateTimerDisplay() {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+        }
+
+        // 초기 문제 표시
+        if (questionSets && questionSets.length > 0) {
+            displayCurrentQuestion();
+        } else {
+            if (questionElement) {
+                questionElement.textContent = "문제가 준비되지 않았습니다. 문제를 추가해주세요.";
+            }
+        }
+
+        })(); // 즉시 실행 함수 종료
     </script>
 </body>
 </html>
